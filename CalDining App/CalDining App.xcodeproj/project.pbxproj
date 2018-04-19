@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
 		6038A386207B3681006276F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A385207B3681006276F2 /* ViewController.swift */; };
-		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; };
+		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; settings = {ASSET_TAGS = (PickDiningHall, ); }; };
 		6038A38B207B3681006276F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38A207B3681006276F2 /* Assets.xcassets */; };
 		6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38C207B3681006276F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -90,6 +90,9 @@
 		6038A378207B3681006276F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					PickDiningHall,
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Jagpinder, Manan, Winston";

@@ -126,6 +126,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ub-Qx-sJ6">
+                                <rect key="frame" x="0.0" y="25.5" width="375" height="216"/>
+                                <accessibility key="accessibilityConfiguration" identifier="pickerView"/>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred Dining Hall:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Stg-HG-4tP">
                                 <rect key="frame" x="16" y="40" width="192" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -147,20 +151,30 @@
                                     <segue destination="3Ls-FZ-4fk" kind="show" id="pvN-HO-MlU"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ub-Qx-sJ6">
-                                <rect key="frame" x="0.0" y="25.5" width="375" height="216"/>
-                                <accessibility key="accessibilityConfiguration" identifier="pickerView"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8F-pV-zP3">
+                                <rect key="frame" x="0.0" y="265" width="375" height="216"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Meal of the Day:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZb-mh-8Qs">
+                                <rect key="frame" x="16" y="279" width="225" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89218515157699585" green="0.82186853885650635" blue="0.43134331703186035" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="9ub-Qx-sJ6" firstAttribute="leading" secondItem="Cff-1o-jdj" secondAttribute="leading" id="4GJ-Dx-3Kn"/>
                             <constraint firstItem="Stg-HG-4tP" firstAttribute="leading" secondItem="Cff-1o-jdj" secondAttribute="leading" constant="16" id="5dZ-4t-BEn"/>
                             <constraint firstItem="Stg-HG-4tP" firstAttribute="top" secondItem="Cff-1o-jdj" secondAttribute="top" constant="20" id="Qrc-Xl-RMj"/>
+                            <constraint firstItem="D8F-pV-zP3" firstAttribute="top" secondItem="NZb-mh-8Qs" secondAttribute="bottom" constant="-40" id="Qvt-3a-BnP"/>
                             <constraint firstItem="9ub-Qx-sJ6" firstAttribute="top" secondItem="Stg-HG-4tP" secondAttribute="bottom" constant="-40" id="XIY-Gx-kUw"/>
                             <constraint firstItem="9ub-Qx-sJ6" firstAttribute="trailing" secondItem="Cff-1o-jdj" secondAttribute="trailing" id="aeJ-zy-zgq"/>
+                            <constraint firstItem="D8F-pV-zP3" firstAttribute="trailing" secondItem="Cff-1o-jdj" secondAttribute="trailing" id="eCV-oU-0yH"/>
+                            <constraint firstItem="D8F-pV-zP3" firstAttribute="leading" secondItem="Cff-1o-jdj" secondAttribute="leading" id="fEL-tG-pPR"/>
                             <constraint firstItem="Cff-1o-jdj" firstAttribute="trailing" secondItem="Y9h-0f-I1K" secondAttribute="trailing" constant="16" id="fsJ-Pd-3e2"/>
+                            <constraint firstItem="NZb-mh-8Qs" firstAttribute="leading" secondItem="Cff-1o-jdj" secondAttribute="leading" constant="16" id="r79-Xi-oUk"/>
                             <constraint firstItem="Cff-1o-jdj" firstAttribute="bottom" secondItem="Y9h-0f-I1K" secondAttribute="bottom" constant="20" id="u5b-78-v5r"/>
+                            <constraint firstItem="NZb-mh-8Qs" firstAttribute="top" secondItem="9ub-Qx-sJ6" secondAttribute="bottom" constant="37.5" id="xR7-jU-C5M"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Cff-1o-jdj"/>
                     </view>

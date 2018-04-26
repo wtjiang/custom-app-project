@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    let colors = ["Crossroads","Cafe 3","Foothill","Clark Kerr"]
+    let halls = ["Crossroads","Cafe 3","Foothill","Clark Kerr"]
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -34,13 +34,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return colors.count
+        return halls.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return colors[row]
+        return halls[row]
     }
-
 
 }
 

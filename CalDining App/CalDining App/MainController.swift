@@ -9,7 +9,7 @@
 import UIKit
 
 class MainController: UIViewController {
-    
+
     @IBOutlet weak var forecastLabel: UILabel!
     
     @IBOutlet weak var pageController: UIPageControl!
@@ -17,17 +17,32 @@ class MainController: UIViewController {
     @IBOutlet weak var settingsButton: UIButton!
     
     @IBAction func leftTouch() {
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "EEEE";
+        let date = formatter.string(from: Date())
+        
         pageController.currentPage -= 1
         pageController.updateCurrentPageDisplay()
         
-        if pageController.currentPage == 
-        forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        if days[pageController.currentPage] == date {
+            forecastLabel.text = "Today's Forecast"
+        } else {
+            forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        }
     }
     
     @IBAction func rightTouch() {
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "EEEE";
+        let date = formatter.string(from: Date())
+        
         pageController.currentPage += 1
         pageController.updateCurrentPageDisplay()
-        forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        if days[pageController.currentPage] == date {
+            forecastLabel.text = "Today's Forecast"
+        } else {
+            forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        }
     }
     
     //    @IBAction func RswipeHandler(_ gestureRecognizer : UISwipeGestureRecognizer) {
@@ -45,9 +60,20 @@ class MainController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "EEEE";
+        let date = formatter.string(from: Date())
+        print(date)
+        
         // Do any additional setup after loading the view, typically from a nib.
         settingsButton.layer.cornerRadius = 4
-        forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        
+        if days[pageController.currentPage] == date {
+            forecastLabel.text = "Today's Forecast"
+        } else {
+            forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        }
+
     }
     
         let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]

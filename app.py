@@ -17,7 +17,8 @@ for i in range(2, 8):
 	data = response.text
 	soups_list.append(BeautifulSoup(data, 'lxml'))
 
-all_foods_dict = []
+all_foods_list = []
+all_foods_dict = {}
 
 for num in range(len(soups_list) + 1):
 	time_food_list = {}
@@ -35,10 +36,14 @@ for num in range(len(soups_list) + 1):
 			elif i.name == "p" and i.has_attr("class") and i.get("class")[0] == "station_wrap":
 				time_food_list[current_place][current_time][i.string.strip()] = []
 				current_cat = i.string.strip()
+				if current_cat not in all_foods_dict.keys():
+					all_foods_dict[current_cat] = []
 			elif i.name == "p" and not i.has_attr("class") and i.contents[0].strip() != 'N/A':
 				time_food_list[current_place][current_time][current_cat].append(i.contents[0].strip())
-				if i.contents[0].strip() not in all_foods_dict:
-					all_foods_dict.append(i.contents[0].strip())
+				current_food = i.contents[0].strip()
+				if current_food not in all_foods_list and current_food not in all_foods_dict[current_cat]:
+					all_foods_list.append(current_food)
+					all_foods_dict[current_cat].append(current_food)
 	data_dict[str(num)] = time_food_list
 
 @app.route('/<day_num>')
@@ -59,7 +64,32 @@ def get_specific_meal_info(day_num, dining_hall, time_of_day, type_of_meal):
 
 @app.route('/list')
 def get_meal_list():
-	return jsonify(sorted(all_foods_dict))
+	return jsonify(sorted(all_foods_list))
 
+@app.route('/list_full')
+def get_full_meal_list():
+	return jsonify(all_foods_dict)
+
+@app.route('/weights')
+def get_weights():
+	weights = {}
+	for key in all_foods_dict:
+		for food in all_foods_dict[key]:
+			if key == "BLUE PLATE" or key == "OSKI'S FAVORITES" or key == "WORLD FLAVORS" or key == "ENTREES" or key == "CENTER OF THE PLATE" or key == "BREAKFAST PLATE" or key == "BUILD YOUR OWN BAR" or key == "BEAR FUSION" or key == "THE BIG C" or key == "CARVING STATION" or key == "BEAR FIT" or key == "KOSHER" or key == "THE GRILL" or key == "GRILLED" or key == "GOLDEN GRILL":
+				weights[food] = 1.5
+			else if key == "HOT MORNING GRAINS" or key == "DESSERTS" or key == "BEAR SWEETS":
+				weights[food] = 0.5
+			else if key == "SMOOTHIES":
+				weights[food] = 0.75
+			else if key == "SOUPS" or key == "BEAR NECESSITIES":
+				weights[food] = 1
+			else if key == "ACTION BAR" or key == "PIZZA STATION" or key == "SLICES" or key == "PASTAS" or key == "CAL-ZONE":
+				weights[food] = 1
+			else if key == "EGGS MADE TO ORDER" or key == "OMELETS AND EGGS" or key == "ITALIAN CORNER":
+				weights[food] = 1
+			else:
+				weights[food] = 1
+
+	return weights
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

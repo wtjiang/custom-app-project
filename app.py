@@ -77,15 +77,15 @@ def get_weights():
 		for food in all_foods_dict[key]:
 			if key == "BLUE PLATE" or key == "OSKI'S FAVORITES" or key == "WORLD FLAVORS" or key == "ENTREES" or key == "CENTER OF THE PLATE" or key == "BREAKFAST PLATE" or key == "BUILD YOUR OWN BAR" or key == "BEAR FUSION" or key == "THE BIG C" or key == "CARVING STATION" or key == "BEAR FIT" or key == "KOSHER" or key == "THE GRILL" or key == "GRILLED" or key == "GOLDEN GRILL":
 				weights[food] = 1.5
-			else if key == "HOT MORNING GRAINS" or key == "DESSERTS" or key == "BEAR SWEETS":
+			elif key == "HOT MORNING GRAINS" or key == "DESSERTS" or key == "BEAR SWEETS":
 				weights[food] = 0.5
-			else if key == "SMOOTHIES":
+			elif key == "SMOOTHIES":
 				weights[food] = 0.75
-			else if key == "SOUPS" or key == "BEAR NECESSITIES":
+			elif key == "SOUPS" or key == "BEAR NECESSITIES":
 				weights[food] = 1
-			else if key == "ACTION BAR" or key == "PIZZA STATION" or key == "SLICES" or key == "PASTAS" or key == "CAL-ZONE":
+			elif key == "ACTION BAR" or key == "PIZZA STATION" or key == "SLICES" or key == "PASTAS" or key == "CAL-ZONE":
 				weights[food] = 1
-			else if key == "EGGS MADE TO ORDER" or key == "OMELETS AND EGGS" or key == "ITALIAN CORNER":
+			elif key == "EGGS MADE TO ORDER" or key == "OMELETS AND EGGS" or key == "ITALIAN CORNER":
 				weights[food] = 1
 			else:
 				weights[food] = 1

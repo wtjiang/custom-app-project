@@ -1,0 +1,53 @@
+{
+  "CENTER OF THE PLATE": [
+    "Scrambled Eggs", 
+    "Soyrizo Scramble", 
+    "Pan-fried Potatoes and Peppers", 
+    "Chocolate Chip Pancakes"
+  ], 
+  "DESSERTS": [
+    "Heath Toffee Crunch Blondie", 
+    "Apple Pie", 
+    "Chocolate Cake"
+  ], 
+  "HOT MORNING GRAINS": [
+    "Rolled Oatmeal"
+  ], 
+  "KOSHER": [
+    "Kosher Delicatessen", 
+    "Kosher Mediterranean Bar", 
+    "Tuna Sandwich", 
+    "Egg Salad Sandwich", 
+    "Potato Salad"
+  ], 
+  "OMELETS AND EGGS": [
+    "Omelet Bar"
+  ], 
+  "OSKI`S FAVORITES": [
+    "Vegetable Stir Fry", 
+    "Vegetable Eggroll", 
+    "Miso Glazed Tilapia", 
+    "Vegetarian Fried Rice", 
+    "Sauteed Zucchini", 
+    "Steamed Broccoli", 
+    "Steamed Rice", 
+    "Brown Rice"
+  ], 
+  "PIZZA STATION": [
+    "Red Sauc Cheese Flatbread", 
+    "Cheese and Pesto Pizza", 
+    "Cheese Pizza", 
+    "Pasta", 
+    "Whole Wheat Pasta", 
+    "Creamy Alfredo Sauce", 
+    "Herbed Marinara Sauce", 
+    "Breadsticks", 
+    "Whole Wheat Dinner Rolls"
+  ], 
+  "SOUPS": [
+    "Minestrone Soup"
+  ], 
+  "SPECIALTY SALADS": [
+    "Garbanzo & Roasted Pepper Salad"
+  ]
+}

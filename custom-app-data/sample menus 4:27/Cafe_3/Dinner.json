@@ -1,0 +1,41 @@
+{
+  "ACTION BAR": [
+    "Red Sauc Cheese Flatbread", 
+    "Cheese and Pesto Pizza", 
+    "Cheese Pizza", 
+    "Pasta", 
+    "Whole Wheat Pasta", 
+    "Creamy Alfredo Sauce", 
+    "Herbed Marinara Sauce", 
+    "Breadsticks", 
+    "Whole Wheat Dinner Rolls"
+  ], 
+  "BLUE PLATE": [
+    "Vegetarian Fried Rice", 
+    "Vegetable Eggroll", 
+    "Steamed Broccoli", 
+    "Steamed Rice", 
+    "Brown Rice", 
+    "Sauteed Zucchini"
+  ], 
+  "ENTREES": [
+    "Tuna Sandwich", 
+    "Egg Salad Sandwich", 
+    "Pickles", 
+    "Potato Salad"
+  ], 
+  "OSKI`S FAVORITES": [
+    "Tostada Bar"
+  ], 
+  "SOUPS": [
+    "Minestrone Soup", 
+    "Sweet Potato Chipotle Soup"
+  ], 
+  "SPECIALTY SALADS": [
+    "Garbanzo & Roasted Pepper Salad"
+  ], 
+  "THE GRILL": [
+    "Hot Dog", 
+    "Housemade BBQ Potato Chips"
+  ]
+}

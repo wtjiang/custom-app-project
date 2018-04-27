@@ -1,0 +1,24 @@
+{
+  "BEAR SWEETS": [
+    "Apple Cinnamon Muffin", 
+    "Cranberry Orange Scone", 
+    "Assorted Danish"
+  ], 
+  "BREAKFAST PLATE": [
+    "Scrambled Eggs", 
+    "Breakfast Polenta", 
+    "Soyrizo Scramble", 
+    "Pan-fried Potatoes and Peppers", 
+    "Blueberry Blintz", 
+    "Spinach and Cheese Croissant"
+  ], 
+  "HOT MORNING GRAINS": [
+    "Rolled Oatmeal", 
+    "Waffles", 
+    "Steamed Rice", 
+    "Brown Rice"
+  ], 
+  "SMOOTHIES": [
+    "Chocolate Raspberry Smoothie"
+  ]
+}

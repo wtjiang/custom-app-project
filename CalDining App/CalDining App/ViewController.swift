@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    let halls = ["Crossroads","Cafe 3","Foothill","Clark Kerr"]
+    let halls = ["Crossroads", "Cafe 3", "Foothill", "Clark Kerr"]
 
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

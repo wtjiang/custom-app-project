@@ -90,6 +90,6 @@ def get_weights():
 			else:
 				weights[food] = 1
 
-	return weights
+	return jsonify(weights)
 if __name__ == '__main__':
     app.run(host='0.0.0.0')

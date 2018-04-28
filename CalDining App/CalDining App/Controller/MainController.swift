@@ -16,6 +16,9 @@ class MainController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIButton!
     
+    //days of the week
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    
     @IBAction func leftTouch() {
         let formatter : DateFormatter = DateFormatter();
         formatter.dateFormat = "EEEE";
@@ -76,7 +79,6 @@ class MainController: UIViewController {
 
     }
     
-        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     
     override func didReceiveMemoryWarning() {

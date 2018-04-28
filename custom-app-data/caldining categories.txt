@@ -1,0 +1,65 @@
+Categories:
+
+Everything:
+MEAL COVERS (EVERYTHING, *foothill lunch* category only)
+
+Breakfast Pastries/Desserts:
+HOT MORNING GRAINS (breakfast pastries, oatmeal, waffles, steamed rice, brown rice)
+DESSERTS (desserts)
+BEAR SWEETS (breakfast desserts, desserts)
+
+Smoothies:
+SMOOTHIES (smoothies) 
+
+Soups/Oatmeal:
+SOUPS (soups)
+BEAR NECESSITIES (soups, oatmeal)
+
+Entrees:
+BLUE PLATE (cultural entrees)
+OSKI`S FAVORITES (brunch, cultural entrees)
+WORLD FLAVORS (cultural entrees)
+ENTREES (entrees)
+CENTER OF THE PLATE (breakfast entrees)
+BREAKFAST PLATE (breakfast entrees)
+BUILD YOUR OWN BAR (entrees, varies)
+BEAR FUSION (entrees, brown rice, steamed rice)
+THE BIG C (breakfast entrees, entrees)
+CARVING STATION (brunch meat/veggie entrees)
+BEAR FIT (vegan entrees) 
+KOSHER (kosher entrees)
+GRILLED (grilled/sandwiches, fries- entrees)
+THE GRILL (grilled/sandwiches, fries- entrees)
+GOLDEN GRILL (grilled/sandwiches, fries- entrees)
+
+Pizza, Pasta:
+ACTION BAR (pizza and pasta)
+PIZZA STATION (pizza)
+SLICES (pizza)
+PASTAS (pasta)
+CAL-ZONE (pizza)
+
+Eggs:
+EGGS MADE TO ORDER (omelet bar)
+OMELETS AND EGGS (omelet bar)
+ITALIAN CORNER (omelet bar)
+
+Specialty Salads (beyond normal salad bar):
+SPECIALTY SALADS (salads)
+DELI AND SALAD BAR (salads)
+
+Thresholds: 
+Not Recommended: 0-1.0
+Recommended: 1.01 - 3.0
+Strongly Recommended: 3.01+
+
+Breakfast Pastries/Desserts:0.5, 
+Smoothies:0.75, 
+Soups/Oatmeal:1.0, 
+Entrees:1.5, 
+Pizza/Pasta:1.0, 
+Eggs:1.0, 
+Specialty Salads: 1.0
+
+https://cal-eats-server.herokuapp.com/weights
+https://cal-eats-server.herokuapp.com/list

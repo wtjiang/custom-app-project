@@ -1,0 +1,45 @@
+{
+  "BEAR SWEETS": [
+    "Chocolate Chunk Brownie", 
+    "Luscious Lemon Bar", 
+    "Pecan Pie"
+  ], 
+  "DELI AND SALAD BAR": [
+    "Garden Pasta Salad", 
+    "Salad Bar", 
+    "Deli Bar"
+  ], 
+  "ENTREES": [
+    "Beef Fajitas", 
+    "Roasted Corn", 
+    "Beef Fajitas", 
+    "Cod Veracruz", 
+    "Cilantro Lime Rice", 
+    "Flour Tortilla", 
+    "Corn Tortillas"
+  ], 
+  "GRILLED": [
+    "Oski Burger", 
+    "Malibu Burger"
+  ], 
+  "PASTAS": [
+    "Pasta", 
+    "Whole Wheat Pasta", 
+    "Breadsticks", 
+    "Pesto Sauce"
+  ], 
+  "SLICES": [
+    "Obrera Pizza", 
+    "Taco w/ Soyrizo Flatbread", 
+    "Pesto Sun Dried Tomato Flatbread"
+  ], 
+  "SOUPS": [
+    "Sweet Potato Chipotle Soup", 
+    "New England Clam Chowder"
+  ], 
+  "WORLD FLAVORS": [
+    "Tostada Bar", 
+    "Steamed Rice", 
+    "Brown Rice"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "BEAR FUSION": [
+    "Burrito Bar", 
+    "Vegetarian Burrito Bar", 
+    "Brown Rice", 
+    "Steamed Rice"
+  ], 
+  "BEAR SWEETS": [
+    "Chocolate Chunk Brownie", 
+    "Luscious Lemon Bar", 
+    "Pecan Pie"
+  ], 
+  "BUILD YOUR OWN BAR": [
+    "Nacho Bar"
+  ], 
+  "ENTREES": [
+    "Grilled Tri Tip w/ Chimichurri Sauce", 
+    "Sole with Garlic Butter", 
+    "Vegan Celebration Roast", 
+    "Buttery Mashed Potatoes", 
+    "Sauteed Green Beans", 
+    "Vegetable Riviera Blend"
+  ], 
+  "GRILLED": [
+    "Chicken Quesadilla", 
+    "Cheese Quesadilla", 
+    "Tortilla Chips with Salsa"
+  ], 
+  "PASTAS": [
+    "Pasta", 
+    "Whole Wheat Pasta", 
+    "Creamy Alfredo Sauce", 
+    "Breadsticks"
+  ], 
+  "SLICES": [
+    "Cheese Flatbread", 
+    "Hawaiian Pizza"
+  ], 
+  "SOUPS": [
+    "Sweet Potato Chipotle Soup", 
+    "New England Clam Chowder"
+  ], 
+  "SPECIALTY SALADS": [
+    "Black Bean & Corn Salad"
+  ]
+}

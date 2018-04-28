@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
 		6038A386207B3681006276F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A385207B3681006276F2 /* ViewController.swift */; };
 		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; settings = {ASSET_TAGS = (PickDiningHall, ); }; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6038A383207B3681006276F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6038A385207B3681006276F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44CC70912093D247009A1420 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				60F18548209156B600DFEE3F /* MainController.swift */,
+				6038A385207B3681006276F2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44CC70932093D25B009A1420 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6038A387207B3681006276F2 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		44CC70942093D269009A1420 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				44CC709920940B89009A1420 /* MealRecommend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		6038A377207B3681006276F2 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +83,10 @@
 		6038A382207B3681006276F2 /* CalDining App */ = {
 			isa = PBXGroup;
 			children = (
+				44CC70942093D269009A1420 /* Model */,
+				44CC70932093D25B009A1420 /* View */,
+				44CC70912093D247009A1420 /* Controller */,
 				6038A383207B3681006276F2 /* AppDelegate.swift */,
-				60F18548209156B600DFEE3F /* MainController.swift */,
-				6038A385207B3681006276F2 /* ViewController.swift */,
-				6038A387207B3681006276F2 /* Main.storyboard */,
 				6038A38A207B3681006276F2 /* Assets.xcassets */,
 				6038A38C207B3681006276F2 /* LaunchScreen.storyboard */,
 				6038A38F207B3681006276F2 /* Info.plist */,
@@ -145,6 +172,7 @@
 				6038A386207B3681006276F2 /* ViewController.swift in Sources */,
 				60F18549209156B600DFEE3F /* MainController.swift in Sources */,
 				6038A384207B3681006276F2 /* AppDelegate.swift in Sources */,
+				44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

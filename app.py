@@ -20,7 +20,7 @@ for i in range(2, 8):
 all_foods_list = []
 all_foods_dict = {}
 
-for num in range(len(soups_list) + 1):
+for num in range(len(soups_list)):
 	time_food_list = {}
 	soup = soups_list[num]
 	for j in soup.find_all(class_ = "desc_wrap_ck3"):

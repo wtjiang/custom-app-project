@@ -22,7 +22,7 @@ all_foods_dict = {}
 
 for num in range(len(soups_list) + 1):
 	time_food_list = {}
-	soup = soups_list[num - 1]
+	soup = soups_list[num]
 	for j in soup.find_all(class_ = "desc_wrap_ck3"):
 		for i in j.children:
 			if i.name == "h3" and i.get("class")[0] == "location2":

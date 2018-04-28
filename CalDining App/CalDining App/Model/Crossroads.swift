@@ -1,55 +1,16 @@
 //
-//  MealRecommend.swift
+//  Crossroads.swift
 //  CalDining App
 //
-//  Created by Winston Jiang on 4/27/18.
+//  Created by Winston Jiang on 4/28/18.
 //  Copyright © 2018 Jagpinder, Manan, Winston. All rights reserved.
 //
 
 import Foundation
-
-class MealRecommend {
-    
-    //days of the week
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    
-    let daysNum = [1, 2, 3, 4, 5, 6, 7]
-    private let notRecommended = 1
-    private let recommended = 3
-    var weights = [1, 3]
-    
-    var todaysDate = String()
-    var myHall = String()
-    
-    //menu standard format
-    let menu = "https://cal-eats-server.herokuapp.com/list_full"
-    let todaysMenu = "https://cal-eats-server.herokuapp.com/-/"
-    
+class Crossroads {
+    let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
     let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
     let crossroadsW = [String]()
-    let cafe3MF = ["Brunch":["CENTER OF THE PLATE","DESSERTS","HOT MORNING GRAINS","KOSHER","OMELETS AND EGGS","OSKI`S FAVORITES","PIZZA STATION","SOUPS","SPECIALTY SALADS"],"Dinner": ["ACTION BAR", "BLUE PLATE","ENTREES","OSKI`S FAVORITES","SOUPS","SPECIALTY SALADS","THE GRILL"]]
-    let cafe3W = [String]()
-    let ckMF = ["Breakfast": ["BEAR SWEETS","BREAKFAST PLATE","HOT MORNING GRAINS","SMOOTHIES"], "Dinner":["BEAR FUSION","BEAR SWEETS","BUILD YOUR OWN BAR","ENTREES","GRILLED","PASTAS","SLICES","SOUPS","SPECIALTY SALADS"]]
-    let ckW = [String]()
-    let foothillMF = ["Breakfast": ["BEAR SWEETS","BREAKFAST PLATE","EGGS MADE TO ORDER","HOT MORNING GRAINS","SMOOTHIES"], "Lunch": ["MEAL COVERS"], "Dinner": ["BEAR SWEETS","DELI AND SALAD BAR","ENTREES","GRILLED","PASTAS","SLICES","SOUPS","WORLD FLAVORS"]]
-    let foothillW = [String]()
-
-    func dayOfWeek() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        let todaysDate = dateFormatter.string(from: Date()).capitalized
-        return todaysDate
-        // or use capitalized(with: locale) if you want
-    }
-
-    init(preferredHall: String) {
-        self.todaysDate = dayOfWeek()!
-        
-        //username?
-        //today's date
-        //user's preferred dining common?
-    }
-
     
     func getMenuItemsFromJSON()  {
         struct MenuList : Codable {
@@ -135,15 +96,6 @@ class MealRecommend {
             }
             }.resume()
     }
-    
-//    func showNames(){
-//        //looing through all the elements of the array
-//        for name in nameArray{
-//            //appending the names to label
-//            menuLabel.text = menuLabel.text! + name + "\n";
-//        }
-//    }
 
-    
-    
 }
+

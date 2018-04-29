@@ -464,19 +464,19 @@ def get_weights():
 	return jsonify(weights)
 
 @app.route('/current_crossroads')
-def get_current():
+def get_current_crossroads():
 	return jsonify(today_meals["Crossroads"])
 
 @app.route('/current_foothill')
-def get_current():
+def get_current_foothill():
 	return jsonify(today_meals["Foothill"])
 
 @app.route('/current_cafe_3')
-def get_current():
+def get_current_cafe_3():
 	return jsonify(today_meals["Cafe_3"])
 
 @app.route('/current_clark_kerr')
-def get_current():
+def get_current_clark_kerr():
 	return jsonify(today_meals["Clark_Kerr_Campus"])
 
 

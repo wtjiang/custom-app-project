@@ -16,11 +16,14 @@ class Crossroads {
     }
     let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
     let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
-    let crossroadsW = [String]()
+    let crossroadsW = ["Brunch": ["BEAR SWEETS", "ITALIAN CORNER", "SMOOTHIES", "BEAR NECESSITIES", "BEAR FIT", "BREAKFAST PLATE", "PASTAS", "GOLDEN GRILL", "SPECIALTY SALADS", "BEAR FUSION"], "Dinner": ["BEAR NECESSITIES", "SPECIALTY SALADS", "THE BIG C", "GOLDEN GRILL", "CAL-ZONE", "PASTAS", "BEAR FUSION", "BEAR SWEETS", "BEAR FIT"]]
     struct MealType: Decodable {
         
     }
-    
+    //still writing this
+    func getMenuItemsFromJSONInProgress() {
+        
+    }
     func getMenuItemsFromJSON()  {
         if todaysDate == "Saturday" || todaysDate == "Sunday" {
             struct Croads : Codable {

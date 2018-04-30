@@ -13,19 +13,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var nextButton: UIButton!
     
+    @IBOutlet weak var menuLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         pickerView.delegate = self
         pickerView.dataSource = self
         nextButton.layer.cornerRadius = 4
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        //getMenuItemsFromJSON()
+        //getJsonFromUrl();
+        
     }
     
+
+
     let halls = ["Crossroads", "Cafe 3", "Foothill", "Clark Kerr"]
 
     

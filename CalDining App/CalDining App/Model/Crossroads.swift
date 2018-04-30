@@ -16,12 +16,48 @@ class Crossroads {
     }
     let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
     let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
-    let crossroadsW = ["Brunch": ["BEAR SWEETS", "ITALIAN CORNER", "SMOOTHIES", "BEAR NECESSITIES", "BEAR FIT", "BREAKFAST PLATE", "PASTAS", "GOLDEN GRILL", "SPECIALTY SALADS", "BEAR FUSION"], "Dinner": ["BEAR NECESSITIES", "SPECIALTY SALADS", "THE BIG C", "GOLDEN GRILL", "CAL-ZONE", "PASTAS", "BEAR FUSION", "BEAR SWEETS", "BEAR FIT"]]
-    struct MealType: Decodable {
+    let crossroadsW = ["Brunch": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "BREAKFAST PLATE", "GOLDEN GRILL", "ITALIAN CORNER", "PASTAS", "SMOOTHIES", "SPECIALTY SALADS"], "Dinner": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "CAL-ZONE", "GOLDEN GRILL", "PASTAS", "SPECIALTY SALADS", "THE BIG C"]]
+
+    //still writing this
+    struct WeekendMenu: Decodable {
+        struct Brunch: Decodable {
+            var BEAR_FIT: [String]
+            var BEAR_FUSION: [String]
+            var BEAR_NECESSITIES: [String]
+            var BEAR_SWEETS: [String]
+            var BREAKFAST_PLATE: [String]
+            var GOLDEN_GRILL: [String]
+            var ITALIAN_CORNER: [String]
+            var PASTAS: [String]
+            var SMOOTHIES: [String]
+            var SPECIALTY_SALADS: [String]
+            private enum CodingKeys: String, CodingKey {
+                case BEAR_FIT  = "BEAR FIT"
+                case BEAR_FUSION  = "BEAR FUSION"
+                case BEAR_NECESSITIES  = "BEAR NECESSITIES"
+                case BEAR_SWEETS  = "BEAR SWEETS"
+                case BREAKFAST_PLATE  = "BREAKFAST PLATE"
+                case GOLDEN_GRILL  = "GOLDEN GRILL"
+                case ITALIAN_CORNER  = "ITALIAN CORNER"
+                case PASTAS  = "PASTAS"
+                case SMOOTHIES  = "SMOOTHIES"
+                case SPECIALTY_SALADS  = "SPECIALTY SALADS"
+            }
+        }
+        struct Dinner: Decodable {
+            //TODO
+        }
+        var brunch: String
+        var dinner: String
+        private enum CodingKeys: String, CodingKey {
+            case brunch = "Brunch"
+            case dinner = "Dinner"
+        }
+    }
+    struct GetWMenu: Decodable {
         
     }
-    //still writing this
-    struct Meal : Decodable
+    
 //    func getMenuItemsFromJSONInProgress() {
 //
 //    }

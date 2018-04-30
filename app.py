@@ -727,8 +727,10 @@ for num in range(len(soups_list)):
 	data_dict[str(num)] = time_food_list
 
 for key in previous_list_full.keys():
+    if key not in all_foods_dict.keys():
+        all_foods_dict[key] = []
     for food in previous_list_full[key]:
-        if all_foods_dict[key] and food not in all_foods_dict[key]:
+        if food not in all_foods_dict[key]:
             all_foods_dict[key].append(food)
 
 @app.route('/<day_num>')

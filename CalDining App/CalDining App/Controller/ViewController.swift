@@ -26,7 +26,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         //getJsonFromUrl();
         todaysDate = dayOfWeek()!
         let crossroads = Crossroads(date: todaysDate)
-        crossroads.getMenuFromJSON()
+        crossroads.getMenuFromJSON(date: todaysDate)
     }
     
     func dayOfWeek() -> String? {

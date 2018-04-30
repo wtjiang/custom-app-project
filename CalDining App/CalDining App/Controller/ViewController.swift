@@ -15,6 +15,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet weak var menuLabel: UILabel!
     
+    var todaysDate: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,10 +24,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         nextButton.layer.cornerRadius = 4
         //getMenuItemsFromJSON()
         //getJsonFromUrl();
-        
+        todaysDate = dayOfWeek()!
+        let crossroads = Crossroads(date: todaysDate)
+        crossroads.getMenuFromJSON()
     }
     
-
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let todaysDate = dateFormatter.string(from: Date()).capitalized
+        return todaysDate
+        // or use capitalized(with: locale) if you want
+    }
 
     let halls = ["Crossroads", "Cafe 3", "Foothill", "Clark Kerr"]
 

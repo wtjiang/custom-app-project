@@ -21,9 +21,10 @@ class Crossroads {
         
     }
     //still writing this
-    func getMenuItemsFromJSONInProgress() {
-        
-    }
+    struct Meal : Decodable
+//    func getMenuItemsFromJSONInProgress() {
+//
+//    }
     func getMenuItemsFromJSON()  {
         if todaysDate == "Saturday" || todaysDate == "Sunday" {
             struct Croads : Codable {

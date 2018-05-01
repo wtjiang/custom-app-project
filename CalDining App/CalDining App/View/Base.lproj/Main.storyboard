@@ -133,13 +133,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Ls-FZ-4fk" kind="show" id="pvN-HO-MlU"/>
+                                    <segue destination="3Ls-FZ-4fk" kind="show" identifier="nextToForecast" id="pvN-HO-MlU"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jn5-zC-3tB">
                                 <rect key="frame" x="0.0" y="20" width="375" height="579"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.82837989879999996" green="0.97331599420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.5750611095" green="0.79039807900000003" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="sectionIndexTrackingBackgroundColor" red="0.85959572572301168" green="1" blue="0.77594748839599603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -161,6 +161,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.82837989881112595" green="0.97331599419976722" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.85959572569999998" green="1" blue="0.77594748840000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -179,34 +180,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYI-7T-ncP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2066.4000000000001" y="-709.29535232383819"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="qKd-Vl-AE8">
-            <objects>
-                <tableViewController id="JSM-Vd-xq5" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="bjy-DG-oFt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="187" id="gSQ-Tu-Nok">
-                                <rect key="frame" x="0.0" y="28" width="375" height="187"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gSQ-Tu-Nok" id="A1y-CG-hPN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="186.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JSM-Vd-xq5" id="Efw-rp-y4V"/>
-                            <outlet property="delegate" destination="JSM-Vd-xq5" id="noC-vc-aWg"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="En7-9o-Bor" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1170.4000000000001" y="-709.29535232383819"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="1oP-2d-sJq">
@@ -397,8 +370,25 @@
                                     <action selector="leftTouch" destination="3Ls-FZ-4fk" eventType="touchUpInside" id="Jvd-11-mxc"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RFg-Hz-c8W">
+                                <rect key="frame" x="67" y="110" width="240" height="448"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.82837989879999996" green="0.97331599420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="64" id="OSm-VS-Dae">
+                                        <rect key="frame" x="0.0" y="28" width="240" height="64"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OSm-VS-Dae" id="JNf-yI-Kdt">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82837989879999996" green="0.97331599420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.5750611095" green="0.79039807900000003" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="sAW-sL-lwF" firstAttribute="leading" secondItem="77Z-di-iXB" secondAttribute="leading" constant="19" id="3Zs-K5-ViQ"/>
@@ -418,6 +408,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="MealRecommend" destination="RFg-Hz-c8W" id="Wqk-cn-Y7H"/>
                         <outlet property="forecastLabel" destination="sAW-sL-lwF" id="uRM-6h-djj"/>
                         <outlet property="pageController" destination="ieS-gJ-kNa" id="ruE-dR-PvV"/>
                         <outlet property="settingsButton" destination="N9R-xu-sIz" id="WBr-IH-3QW"/>
@@ -425,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhL-hb-gzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2098" y="27"/>
+            <point key="canvasLocation" x="-2066.4000000000001" y="101.19940029985008"/>
         </scene>
         <!--Set-Up View Controller-->
         <scene sceneID="bdT-Du-W3D">

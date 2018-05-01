@@ -34,16 +34,9 @@ class MealRecommend {
     let foothillMF = ["Breakfast": ["BEAR SWEETS","BREAKFAST PLATE","EGGS MADE TO ORDER","HOT MORNING GRAINS","SMOOTHIES"], "Lunch": ["MEAL COVERS"], "Dinner": ["BEAR SWEETS","DELI AND SALAD BAR","ENTREES","GRILLED","PASTAS","SLICES","SOUPS","WORLD FLAVORS"]]
     let foothillW = ["Brunch": ["BEAR SWEETS", "CARVING STATION", "ENTREES", "GRILLED", "HOT MORNING GRAINS", "PASTAS", "SMOOTHIES", "SOUPS", "SPECIALTY SALADS"], "Dinner": ["BEAR SWEETS", "DELI AND SALAD BAR", "ENTREES", "GRILLED", "PASTAS", "SLICES", "SOUPS", "WORLD FLAVORS"]]
 
-    func dayOfWeek() -> String? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEEE"
-        let todaysDate = dateFormatter.string(from: Date()).capitalized
-        return todaysDate
-        // or use capitalized(with: locale) if you want
-    }
 
-    init(preferredHall: String) {
-        self.todaysDate = dayOfWeek()!
+    init(date: String) {
+        self.todaysDate = date
         
         //username?
         //today's date

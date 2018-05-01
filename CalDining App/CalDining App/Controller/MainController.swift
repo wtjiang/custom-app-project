@@ -8,7 +8,16 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: UIViewController{
+    //, UITableViewDelegate, UITableViewDataSource
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+    
 
     @IBOutlet weak var forecastLabel: UILabel!
     
@@ -16,9 +25,32 @@ class MainController: UIViewController {
     
     @IBOutlet weak var settingsButton: UIButton!
     
+    @IBOutlet weak var MealRecommend: UITableView!
+    
     //days of the week
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
+    //passed from ViewController (the table view)
+    var selectedCells: [String] = []
+    var currentUser = User()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        let formatter : DateFormatter = DateFormatter();
+        formatter.dateFormat = "EEEE";
+        let date = formatter.string(from: Date())
+        //print(date)
+        print("Passed Cells: \n", selectedCells)
+        // Do any additional setup after loading the view, typically from a nib.
+        settingsButton.layer.cornerRadius = 4
+        
+        if days[pageController.currentPage] == date {
+            forecastLabel.text = "Today's Forecast"
+        } else {
+            forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
+        }
+    }
+
     @IBAction func leftTouch() {
         let formatter : DateFormatter = DateFormatter();
         formatter.dateFormat = "EEEE";
@@ -60,25 +92,6 @@ class MainController: UIViewController {
 //            pageController.currentPage -= 1
 //        }
 //    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let formatter : DateFormatter = DateFormatter();
-        formatter.dateFormat = "EEEE";
-        let date = formatter.string(from: Date())
-        print(date)
-        
-        // Do any additional setup after loading the view, typically from a nib.
-        settingsButton.layer.cornerRadius = 4
-        
-        if days[pageController.currentPage] == date {
-            forecastLabel.text = "Today's Forecast"
-        } else {
-            forecastLabel.text = days[pageController.currentPage] + "'s Forecast"
-        }
-
-    }
-    
     
     
     override func didReceiveMemoryWarning() {

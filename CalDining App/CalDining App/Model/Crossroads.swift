@@ -14,6 +14,7 @@ class Crossroads {
     init(date: String) {
         todaysDate = date
     }
+    
     let testMenu = "https://cal-eats-server.herokuapp.com/current_crossroads"
     let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
     let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]

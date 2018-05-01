@@ -48,6 +48,7 @@ class Crossroads {
 //    }
 //}
     //new idea #2, also works, might be preferred
+
     func getMenuFromJSON(date: String) {
         if date == "Saturday" || date == "Sunday" {
             struct WeekendMenu: Decodable {
@@ -147,97 +148,3 @@ class Crossroads {
         }
         }
     }
-    //still writing this
-//    struct WeekendMenu: Decodable {
-//        struct Brunch: Decodable {
-//            var BEAR_FIT: [String]
-//            var BEAR_FUSION: [String]
-//            var BEAR_NECESSITIES: [String]
-//            var BEAR_SWEETS: [String]
-//            var BREAKFAST_PLATE: [String]
-//            var GOLDEN_GRILL: [String]
-//            var ITALIAN_CORNER: [String]
-//            var PASTAS: [String]
-//            var SMOOTHIES: [String]
-//            var SPECIALTY_SALADS: [String]
-//            private enum CodingKeys: String, CodingKey {
-//                case BEAR_FIT  = "BEAR FIT"
-//                case BEAR_FUSION  = "BEAR FUSION"
-//                case BEAR_NECESSITIES  = "BEAR NECESSITIES"
-//                case BEAR_SWEETS  = "BEAR SWEETS"
-//                case BREAKFAST_PLATE  = "BREAKFAST PLATE"
-//                case GOLDEN_GRILL  = "GOLDEN GRILL"
-//                case ITALIAN_CORNER  = "ITALIAN CORNER"
-//                case PASTAS  = "PASTAS"
-//                case SMOOTHIES  = "SMOOTHIES"
-//                case SPECIALTY_SALADS  = "SPECIALTY SALADS"
-//            }
-//        }
-//        struct Dinner: Decodable {
-//            //TODO
-//        }
-//        var brunch: String
-//        var dinner: String
-//        private enum CodingKeys: String, CodingKey {
-//            case brunch = "Brunch"
-//            case dinner = "Dinner"
-//        }
-//    }
-//    struct GetWMenu: Decodable {
-//
-//    }
-    
-//    func getMenuItemsFromJSONInProgress() {
-//
-//    }
-    //old method
-//    func getMenuItemsFromJSON()  {
-//        if todaysDate == "Saturday" || todaysDate == "Sunday" {
-//            struct Croads : Codable {
-//                let BEAR_FIT: [String]
-//                let BEAR_FUSION: [String]
-//                let HOT_MORNING_GRAINS: [String]
-//                let SMOOTHIES: [String]
-//                let THE_BIG_C: [String]
-//                private enum CodingKeys: String, CodingKey {
-//                    case BEAR_FIT  = "BEAR FIT"
-//                    case BEAR_FUSION  = "BEAR FUSION"
-//                    case HOT_MORNING_GRAINS  = "HOT MORNING GRAINS"
-//                    case SMOOTHIES  = "SMOOTHIES"
-//                    case THE_BIG_C  = "THE BIG C"
-//                }
-//            }
-//        } else {
-//            struct Croads : Codable {
-//                let BEAR_FIT: [String]
-//                let BEAR_FUSION: [String]
-//                let HOT_MORNING_GRAINS: [String]
-//                let SMOOTHIES: [String]
-//                let THE_BIG_C: [String]
-//                private enum CodingKeys: String, CodingKey {
-//                    case BEAR_FIT  = "BEAR FIT"
-//                    case BEAR_FUSION  = "BEAR FUSION"
-//                    case HOT_MORNING_GRAINS  = "HOT MORNING GRAINS"
-//                    case SMOOTHIES  = "SMOOTHIES"
-//                    case THE_BIG_C  = "THE BIG C"
-//                }
-//            }
-//        }
-//
-//        guard let gitUrl = URL(string: menu) else { return }
-//        URLSession.shared.dataTask(with: gitUrl) { (data, response, error) in
-//            guard let data = data else { return }
-//            do {
-//                let decoder = JSONDecoder()
-//                let gitData = try decoder.decode(Croads.self, from: data)
-//
-//                print(gitData)
-//
-//            } catch let err {
-//                print("Err", err)
-//            }
-//            }.resume()
-//    }
-
-//}
-

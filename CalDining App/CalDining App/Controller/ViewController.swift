@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var selectedCellsWeights: [Double] = []
     var selectedCellsDict = [String: Double]()
     var checked = [Bool]()
-    var checkedMarks = []
+    //var checkedMarks = []
     var todaysDate: String = ""
     
     let currentUser = User()
@@ -37,37 +37,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-//        pickerView.delegate = self
-//        pickerView.dataSource = self
-//        nextButton.layer.cornerRadius = 4
-        
-        //
+
         menuTable.delegate = self
         menuTable.dataSource = self
         menuTable.allowsMultipleSelection = true
-        //menuTable.rowHeight = UITableViewAutomaticDimension
-        if defaults.object(forKey: "checked") != nil {
-            checked = defaults.object(forKey: "checked") as? [Bool] ?? [Bool]()
-        } else {
-            checked = [Bool](repeating: false, count:menuList.count)
-        }
-                //Crossroads menu - moved to User
-//        todaysDate = dayOfWeek()!
-//        let crossroads = Crossroads(date: todaysDate)
-        //crossroads.getMenuFromJSON(date: todaysDate)
+        checked = [Bool](repeating: false, count:menuList.count)
+//        if defaults.object(forKey: "checked") != nil {
+//            checked = defaults.object(forKey: "checked") as? [Bool] ?? [Bool]()
+//        } else {
+//            checked = [Bool](repeating: false, count:menuList.count)
+//        }
     }
     
-class ListItem: NSObject {
-        let itemName: String
-        var completed: Bool
-        
-        init(itemName: String, completed: Bool = false)
-        {
-            self.itemName = itemName
-            self.completed = completed
-        }
-    }
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuList.count
     }
@@ -91,11 +72,9 @@ class ListItem: NSObject {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
                 checked[indexPath.row] = false
-                defaults.set(checked, forKey: "checked")
             } else {
                 cell.accessoryType = .checkmark
                 checked[indexPath.row] = true
-                defaults.set(checked, forKey: "checked")
             }
         }
         
@@ -110,11 +89,9 @@ class ListItem: NSObject {
             if cell.accessoryType == .checkmark {
                 cell.accessoryType = .none
                 checked[indexPath.row] = false
-                defaults.set(checked, forKey: "checked")
             } else {
                 cell.accessoryType = .checkmark
                 checked[indexPath.row] = true
-                defaults.set(checked, forKey: "checked")
             }
         }
         currentUser.myPreferences.remove(at: selectedCells.index(of: menuList[indexPath.row])!)
@@ -130,14 +107,32 @@ class ListItem: NSObject {
         for (key, value) in zip(selectedCells, selectedCellsWeights) {
             selectedCellsDict[key] = value
         }
-        
         defaults.set(selectedCells, forKey: "selectedCells")
         defaults.set(selectedCellsWeights, forKey: "selectedCellsWeights")
         defaults.set(selectedCellsDict, forKey: "selectedCellsDict")
-        defaults.set(checked, forKey: "checked")
+        //defaults.set(checked, forKey: "checked")
+        if let selectedRows = menuTable.indexPathsForSelectedRows {
+            let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: selectedRows)
+            defaults.set(encodedData, forKey: "selectedRows")
+        }
+        
+
         defaults.synchronize()
         mainController.currentUser = currentUser
         print("Saved")
+    }
+
+    @IBAction func clearSelectedItems(_ sender: Any) {
+        let domain = Bundle.main.bundleIdentifier!
+        defaults.removePersistentDomain(forName: domain)
+        defaults.synchronize()
+        //clear selected rows and checkmarks
+        if let selectedRows = menuTable.indexPathsForSelectedRows {
+            for indexPath in selectedRows {
+                menuTable.deselectRow(at: (indexPath as NSIndexPath) as IndexPath, animated: true)
+                menuTable.cellForRow(at: indexPath)?.accessoryType = .none
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -154,20 +149,6 @@ class ListItem: NSObject {
             vc.daysIndex = days.index(of: currentUser.todaysDate)!
         }
     }
-    
-    //reset checkmarks
-//    func resetChecks() {
-//        for i in 0.. < tableView.numberOfSections {
-//            for j in 0.. < tableView.numberOfRowsInSection(i) {
-//                if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: j, inSection: i)) {
-//                    cell.accessoryType = .None
-//                }
-//            }
-//        }
-//    }
-
-    
-
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

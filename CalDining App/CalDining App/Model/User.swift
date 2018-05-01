@@ -24,7 +24,7 @@ class User {
         
         todaysDate = dayOfWeek()!
         let crossroads = Crossroads(date: todaysDate)
-        crossroads.getMenuFromJSON(date: todaysDate)
+        //crossroads.getMenuFromJSON(date: todaysDate)
         
 
     }

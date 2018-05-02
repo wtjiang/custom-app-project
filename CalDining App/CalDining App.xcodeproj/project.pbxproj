@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		44189E22209853BF0076D5E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E21209853BF0076D5E9 /* User.swift */; };
+		44189E272099C2640076D5E9 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 44189E252099C2640076D5E9 /* logo.png */; };
+		44189E282099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */; };
 		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		44189E21209853BF0076D5E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		44189E252099C2640076D5E9 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Desktop/logo.png; sourceTree = "<group>"; };
+		44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ViewFromTopOfCampanile_MicahelDrummond.jpg; path = ../../../Desktop/ViewFromTopOfCampanile_MicahelDrummond.jpg; sourceTree = "<group>"; };
 		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		44CC709D20953CB0009A1420 /* Crossroads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossroads.swift; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +93,8 @@
 		6038A382207B3681006276F2 /* CalDining App */ = {
 			isa = PBXGroup;
 			children = (
+				44189E252099C2640076D5E9 /* logo.png */,
+				44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */,
 				44CC70942093D269009A1420 /* Model */,
 				44CC70932093D25B009A1420 /* View */,
 				44CC70912093D247009A1420 /* Controller */,
@@ -163,7 +169,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
+				44189E272099C2640076D5E9 /* logo.png in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
+				44189E282099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg in Resources */,
 				6038A389207B3681006276F2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,10 +326,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV3CQ24F8J;
+				DEVELOPMENT_TEAM = 33LDUQQZNX;
 				INFOPLIST_FILE = "CalDining App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaggaa.CalDining-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winston.CalDining-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,10 +341,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV3CQ24F8J;
+				DEVELOPMENT_TEAM = 33LDUQQZNX;
 				INFOPLIST_FILE = "CalDining App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaggaa.CalDining-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winston.CalDining-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

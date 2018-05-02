@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet weak var clearAll: UIButton!
     @IBOutlet weak var saveSelected: UIButton!
     @IBOutlet weak var menuTable: UITableView!
     
@@ -64,6 +64,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             checked = [Bool](repeating: false, count:menuList.count)
             checkedRows = [IndexPath]()
         }
+        nextButton.layer.cornerRadius = 4
+        saveSelected.layer.cornerRadius = 4
+        clearAll.layer.cornerRadius = 4
     }
     
     func makeSavedAlert() {

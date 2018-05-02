@@ -182,15 +182,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "nextToForecast") {
-            //menuTable.clearsContextBeforeDrawing = false
             let vc = segue.destination as! MainController
-//            for (key, value) in zip(selectedCells, selectedCellsWeights) {
-//                selectedCellsDict[key] = value
-//            }
-//            vc.selectedCells = selectedCells
-//            vc.selectedCellsWeights = selectedCellsWeights
-//            vc.selectedCellsDict = selectedCellsDict
-//            vc.currentUser = currentUser
             let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
             vc.daysIndex = days.index(of: currentUser.todaysDate)!
         }

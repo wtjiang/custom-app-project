@@ -20,15 +20,28 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     let daysNums = [0,1,2,3,4,5,6]
     var daysIndex = Int()
-    let halls = ["Crossroads", "Cafe 3", "Foothill", "Clark Kerr"]
-    let MFMeals = ["Crossroads Breakfast", "Crossroads Lunch", "Crossroads Dinner", "Cafe 3 Brunch", "Cafe 3 Dinner", "Foothill Breakfast", "Foothill Lunch", "Foothill Dinner", "Clark Kerr Breakfast", "Clark Kerr Dinner"]
-    let WMeals = ["Crossroads Brunch", "Crossroads Dinner", "Cafe 3 Brunch", "Cafe 3 Dinner", "Foothill Brunch", "Foothill Dinner", "Clark Kerr Brunch", "Clark Kerr Dinner"]
+    
+//    let MFMeals = ["Crossroads Breakfast", "Crossroads Lunch", "Crossroads Dinner", "Cafe 3 Brunch", "Cafe 3 Dinner", "Foothill Breakfast", "Foothill Lunch", "Foothill Dinner", "Clark Kerr Breakfast", "Clark Kerr Dinner"]
+//    let WMeals = ["Crossroads Brunch", "Crossroads Dinner", "Cafe 3 Brunch", "Cafe 3 Dinner", "Foothill Brunch", "Foothill Dinner", "Clark Kerr Brunch", "Clark Kerr Dinner"]
+    
+    //
+    var todaysMeals = [String: Double]()
+    
+    //RECOMMENDATION WEIGHTS
+    let lowerBound = 0.0
+    let middleBound = 1.5
+    let upperBound = 4.0
+    
     //passed from ViewController (the table view)
-    var selectedCells: [String] = []
-    var selectedCellsWeights: [Double] = []
-    var selectedCellsDict = [String: Double]()
+    var selectedCells: [String] = [] //from user
+    var selectedCellsWeights: [Double] = [] //from user
+    var selectedCellsDict = [String: Double]() //from user
+
     var currentUser = User()
     let defaults = UserDefaults.standard
+    
+    var todaysDate: String = ""
+    var menuWithWeightsCrossroads = [String: [String: Double]]() //today's menus with menu weights
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,30 +52,69 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         selectedCells = defaults.object(forKey: "selectedCells") as? [String] ?? [String]()
         selectedCellsWeights = defaults.object(forKey: "selectedCellsWeights") as? [Double] ?? [Double]()
         selectedCellsDict = defaults.object(forKey: "selectedCellsDict") as? [String : Double] ?? [String : Double]()
+        todaysDate = dayOfWeek()!
+        recommendCrossroads()
 
-        print("Passed selectedCells: ", selectedCells)
-        print("Passed selectedCellsWeights: ", selectedCellsWeights)
-        print("Passed selectedCellsDict: ", selectedCellsDict)
+//        print("Passed selectedCells: ", selectedCells)
+//        print("Passed selectedCellsWeights: ", selectedCellsWeights)
+//        print("Passed selectedCellsDict: ", selectedCellsDict)
 
         // Do any additional setup after loading the view, typically from a nib.
         settingsButton.layer.cornerRadius = 4
     }
+
+    func dayOfWeek() -> String? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE"
+        let todaysDate = dateFormatter.string(from: Date()).capitalized
+        return todaysDate
+    }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
-            return WMeals.count
-        } else {
-            return MFMeals.count
+    func recommendCrossroads() {
+        let crossroads = Crossroads(date: todaysDate)
+        crossroads.getMenuFromJSON(date: todaysDate) { (result) -> () in
+            self.menuWithWeightsCrossroads = result
+            for (meal, dish) in self.menuWithWeightsCrossroads {
+                var mealSum = 0.0
+                for (item, _) in dish {
+                    if let val = self.selectedCellsDict[item] {
+                        mealSum += val
+                    }
+                }
+                self.todaysMeals.updateValue(mealSum, forKey: "Crossroads \(meal)")
+            }
+            print(self.todaysMeals)
+            self.mealRecommendTable.reloadData()
         }
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
+//            return WMeals.count
+//        } else {
+//            return MFMeals.count
+//        }
+        return todaysMeals.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mealRecommendTable.dequeueReusableCell(withIdentifier: "cell")
-        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
-            cell?.textLabel?.text = WMeals[indexPath.row]
+        let values = Array(todaysMeals.values)[indexPath.row]
+        cell?.textLabel?.text = Array(todaysMeals.keys)[indexPath.row]
+//        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
+//            cell?.textLabel?.text = WMeals[indexPath.row]
+//        } else {
+//            cell?.textLabel?.text = MFMeals[indexPath.row]
+//        }
+        if values >= lowerBound && values < middleBound {
+            cell?.detailTextLabel?.text = "Not Recommended"
+        } else if values >= middleBound && values < upperBound {
+            cell?.detailTextLabel?.text = "Recommended"
+        } else if values >= upperBound {
+            cell?.detailTextLabel?.text = "Highly Recommended"
         } else {
-            cell?.textLabel?.text = MFMeals[indexPath.row]
+            cell?.detailTextLabel?.text = "No Recommendation Available"
         }
+        
         return cell!
     }
 

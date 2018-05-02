@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="WQG-rG-B2Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lxk-dk-1iw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -520,10 +521,58 @@
             </objects>
             <point key="canvasLocation" x="-4633" y="-729"/>
         </scene>
+        <!--Welcome-->
+        <scene sceneID="1Ik-bo-jVv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ij-84-ADe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="Welcome" id="Lxk-dk-1iw" customClass="WelcomeViewController" customModule="CalDining_App" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sge-jH-uX4"/>
+                        <viewControllerLayoutGuide type="bottom" id="svG-iR-2ut"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YpL-v0-s29">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Copyright © 2018 The Cal Eats Group, Inc. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="A5B-Z5-S5s">
+                                <rect key="frame" x="19" y="626" width="340" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-1I-5pl">
+                                <rect key="frame" x="-227" y="54" width="828" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
+                                <rect key="frame" x="93" y="223" width="188" height="175"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
+                                    <rect key="frame" x="0.0" y="0.0" width="188" height="175"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AUZ-6M-Guo"/>
+                    </view>
+                    <connections>
+                        <outlet property="blur" destination="IjJ-by-CbP" id="HOC-Uc-boS"/>
+                        <outlet property="copyright" destination="A5B-Z5-S5s" id="FJN-Eu-eAL"/>
+                        <outlet property="logo" destination="PD5-1I-5pl" id="iIO-VW-C10"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2687.1999999999998" y="-1458.6206896551726"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="logoGold.png" width="900" height="1600"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2ZB-ad-Szf"/>
-        <segue reference="lUC-vR-6xp"/>
+        <segue reference="daw-4B-szf"/>
+        <segue reference="2PF-gb-nTj"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98550945520401001" green="0.98115831613540649" blue="0.0070775304920971394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

@@ -62,6 +62,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         settingsButton.layer.cornerRadius = 4
     }
+        
 
     func dayOfWeek() -> String? {
         let dateFormatter = DateFormatter()
@@ -83,7 +84,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 self.todaysMeals.updateValue(mealSum, forKey: "Crossroads \(meal)")
             }
-            self.mealRecommendTable.reloadData()
+            DispatchQueue.main.async {
+                self.mealRecommendTable.reloadData()
+            }
         }
     }
 

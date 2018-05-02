@@ -34,19 +34,10 @@ class User {
     let foothillMF = ["Breakfast": ["BEAR SWEETS","BREAKFAST PLATE","EGGS MADE TO ORDER","HOT MORNING GRAINS","SMOOTHIES"], "Lunch": ["MEAL COVERS"], "Dinner": ["BEAR SWEETS","DELI AND SALAD BAR","ENTREES","GRILLED","PASTAS","SLICES","SOUPS","WORLD FLAVORS"]]
     let foothillW = ["Brunch": ["BEAR SWEETS", "CARVING STATION", "ENTREES", "GRILLED", "HOT MORNING GRAINS", "PASTAS", "SMOOTHIES", "SOUPS", "SPECIALTY SALADS"], "Dinner": ["BEAR SWEETS", "DELI AND SALAD BAR", "ENTREES", "GRILLED", "PASTAS", "SLICES", "SOUPS", "WORLD FLAVORS"]]
     
-    var breakfastCrossroads = [String]()
-    var brunchCrossroads = [String]()
-    var lunchCrossroads = [String]()
-    var dinnerCrossroads = [String]()
 
 
     init() {
         todaysDate = dayOfWeek()!
-    }
-    
-    func crossroadsRecommend() {
-//        let crossroads = Crossroads(date: todaysDate)
-//        let a = crossroads.getMenuFromJSON(date: todaysDate)
     }
     
     func dayOfWeek() -> String? {

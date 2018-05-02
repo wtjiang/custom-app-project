@@ -24,7 +24,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var selectedCellsWeights: [Double] = []
     var selectedCellsDict = [String: Double]()
     var checked = [Bool]()
-    //var checkedMarks = []
+    var checkedRows = [IndexPath]()
     var todaysDate: String = ""
     
     let currentUser = User()
@@ -41,12 +41,21 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         menuTable.delegate = self
         menuTable.dataSource = self
         menuTable.allowsMultipleSelection = true
-        checked = [Bool](repeating: false, count:menuList.count)
-//        if defaults.object(forKey: "checked") != nil {
-//            checked = defaults.object(forKey: "checked") as? [Bool] ?? [Bool]()
-//        } else {
-//            checked = [Bool](repeating: false, count:menuList.count)
-//        }
+//        checked = [Bool](repeating: false, count:menuList.count)
+        
+        if defaults.object(forKey: "checked") != nil {
+            checked = defaults.object(forKey: "checked") as? [Bool] ?? [Bool]()
+            let selected = defaults.object(forKey: "selectedRows") as! Data
+            checkedRows = NSKeyedUnarchiver.unarchiveObject(with: selected) as! [IndexPath]
+
+            for indexPath in checkedRows {
+                menuTable.selectRow(at: (indexPath as NSIndexPath) as IndexPath, animated: true, scrollPosition: UITableViewScrollPosition.none)
+                menuTable.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            }
+        } else {
+            checked = [Bool](repeating: false, count:menuList.count)
+            checkedRows = [IndexPath]()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -110,13 +119,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         defaults.set(selectedCells, forKey: "selectedCells")
         defaults.set(selectedCellsWeights, forKey: "selectedCellsWeights")
         defaults.set(selectedCellsDict, forKey: "selectedCellsDict")
-        //defaults.set(checked, forKey: "checked")
+        defaults.set(checked, forKey: "checked")
         if let selectedRows = menuTable.indexPathsForSelectedRows {
             let encodedData: Data = NSKeyedArchiver.archivedData(withRootObject: selectedRows)
             defaults.set(encodedData, forKey: "selectedRows")
         }
-        
-
         defaults.synchronize()
         mainController.currentUser = currentUser
         print("Saved")
@@ -137,6 +144,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "nextToForecast") {
+            //menuTable.clearsContextBeforeDrawing = false
             let vc = segue.destination as! MainController
 //            for (key, value) in zip(selectedCells, selectedCellsWeights) {
 //                selectedCellsDict[key] = value

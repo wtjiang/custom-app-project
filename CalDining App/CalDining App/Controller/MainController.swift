@@ -40,8 +40,6 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         selectedCellsWeights = defaults.object(forKey: "selectedCellsWeights") as? [Double] ?? [Double]()
         selectedCellsDict = defaults.object(forKey: "selectedCellsDict") as? [String : Double] ?? [String : Double]()
 
-        print("Passed currentUser: ", currentUser)
-        print("Passed currentUser Preferences: ", currentUser.myPreferences)
         print("Passed selectedCells: ", selectedCells)
         print("Passed selectedCellsWeights: ", selectedCellsWeights)
         print("Passed selectedCellsDict: ", selectedCellsDict)

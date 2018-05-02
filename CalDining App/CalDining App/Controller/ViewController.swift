@@ -66,6 +66,25 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    func makeSavedAlert() {
+        let savedAlert = UIAlertController(title: "Success!", message: "Your preferences have been updated", preferredStyle: .alert)
+        
+        let savedAction = UIAlertAction(title: "Right on", style: .default) { (action:UIAlertAction) in
+        }
+        savedAlert.addAction(savedAction)
+        present(savedAlert, animated: true, completion: nil)
+    }
+    
+    func makeClearAlert() {
+        let clearAlert = UIAlertController(title: "Success!", message: "Your preferences have been deleted", preferredStyle: .alert)
+        
+        let clearAction = UIAlertAction(title: "Right on", style: .default) { (action:UIAlertAction) in
+        }
+        clearAlert.addAction(clearAction)
+        present(clearAlert, animated: true, completion: nil)
+    }
+    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuList.count
     }
@@ -111,10 +130,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 checked[indexPath.row] = true
             }
             let tempIndex = selectedCells.index(of: menuList[indexPath.row])!
+            
             //currentUser.myPreferences.remove(at: tempIndex)
-            print(selectedCells)
             selectedCells.remove(at: tempIndex)
-            print(selectedCells)
             selectedCellsWeights.remove(at: tempIndex)
         }
     }
@@ -126,12 +144,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func saveSelectedItems(_ sender: Any) {
         if selectedCells.isEmpty {
             selectedCellsDict.removeAll()
-            print("hello")
         } else {
             for (key, value) in zip(selectedCells, selectedCellsWeights) {
                 selectedCellsDict[key] = value
             }
-            print("goodbye")
         }
         defaults.set(selectedCells, forKey: "selectedCells")
         defaults.set(selectedCellsWeights, forKey: "selectedCellsWeights")
@@ -143,9 +159,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         defaults.synchronize()
         //mainController.currentUser = currentUser
-        print("Saved")
         isCleared = false
         defaults.set(isCleared, forKey: "isCleared")
+        makeSavedAlert()
     }
 
     @IBAction func clearSelectedItems(_ sender: Any) {
@@ -161,6 +177,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         defaults.synchronize()
         isCleared = true
         defaults.set(isCleared, forKey: "isCleared")
+        makeClearAlert()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

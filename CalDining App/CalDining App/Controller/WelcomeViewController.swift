@@ -22,11 +22,11 @@ class WelcomeViewController: UIViewController {
 //        blurView.frame.size = CGSize(width: 130, height: 180)
 //        blurView.center = logo.center
 //        view.addSubview(blurView)
-        self.view.bringSubview(toFront: logo)
         assignbackground()
+        self.view.bringSubview(toFront: logo)
     }
     
-    func assignbackground(){
+    func assignbackground() {
         let background = UIImage(named: "ViewFromTopOfCampanile_MicahelDrummond.jpg")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
@@ -44,6 +44,9 @@ class WelcomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    }
+
 
     /*
     // MARK: - Navigation

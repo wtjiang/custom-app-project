@@ -38,6 +38,10 @@
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="bk8-A0-WKh"/>
                     </view>
+                    <connections>
+                        <outlet property="copyright" destination="k3R-HB-LFJ" id="Kj7-L3-kYa"/>
+                        <outlet property="logo" destination="X2N-Rz-osD" id="IMd-qs-B1e"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="-568.06596701649175"/>

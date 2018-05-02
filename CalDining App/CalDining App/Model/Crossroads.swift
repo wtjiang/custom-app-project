@@ -49,12 +49,6 @@ class Crossroads {
 //}
     //new idea #2, also works, might be preferred
     
-    var breakfastCrossroads = [String]()
-    var brunchCrossroads = [String]()
-    var lunchCrossroads = [String]()
-    var dinnerCrossroads = [String]()
-    
-    
     func getMenuFromJSON(date: String, completion: @escaping ([String: [String: Double]]) -> ()) {
         var todaysMenus = [String: [String]]()
         var todaysMenusDict = [String: [String: Double]]()
@@ -107,7 +101,9 @@ class Crossroads {
                             todaysMenusDict[meal] = inner
                         }
                     }
-                    completion(todaysMenusDict)
+                    DispatchQueue.main.async {
+                        completion(todaysMenusDict)
+                    }
                 } catch let err {
                     print("Err", err)
                 }
@@ -167,7 +163,9 @@ class Crossroads {
                             todaysMenusDict[meal] = inner
                         }
                     }
-                    completion(todaysMenusDict)
+                    DispatchQueue.main.async {
+                        completion(todaysMenusDict)
+                    }
                 } catch let err {
                     print("Err", err)
                 }}.resume()

@@ -171,6 +171,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func clearSelectedItems(_ sender: Any) {
         let domain = Bundle.main.bundleIdentifier!
         defaults.removePersistentDomain(forName: domain)
+        defaults.synchronize()
+        checked.removeAll(keepingCapacity: true)
+        checked = [Bool](repeating: false, count:menuList.count)
         //clear selected rows and checkmarks
         if let selectedRows = menuTable.indexPathsForSelectedRows {
             for indexPath in selectedRows {
@@ -178,7 +181,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 menuTable.cellForRow(at: indexPath)?.accessoryType = .none
             }
         }
-        defaults.synchronize()
         isCleared = true
         defaults.set(isCleared, forKey: "isCleared")
         makeClearAlert()

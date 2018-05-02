@@ -120,10 +120,10 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell?.detailTextLabel?.textColor = UIColor(red:1.00, green:0.48, blue:0.48, alpha:1.0)
         } else if values >= middleBound && values < upperBound {
             cell?.detailTextLabel?.text = "Recommended"
-            cell?.detailTextLabel?.tintColor = UIColor(red:0.06, green:0.70, blue:0.16, alpha:1.0)
+            cell?.detailTextLabel?.textColor = UIColor(red:0.06, green:0.70, blue:0.16, alpha:1.0)
         } else if values >= upperBound {
             cell?.detailTextLabel?.text = "Highly Recommended"
-            cell?.detailTextLabel?.tintColor = UIColor(red:0.88, green:0.82, blue:0.18, alpha:1.0)
+            cell?.detailTextLabel?.textColor = UIColor(red:0.88, green:0.82, blue:0.18, alpha:1.0)
         } else {
             cell?.detailTextLabel?.text = "No Recommendation Available"
 

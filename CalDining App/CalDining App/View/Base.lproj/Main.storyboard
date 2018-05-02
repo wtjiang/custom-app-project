@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Log In View Controller-->
+        <!--Title-->
         <scene sceneID="Zfb-Sd-uU0">
             <objects>
                 <viewController id="BnP-Qt-kOA" customClass="LogInViewController" customModule="CalDining_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,13 +56,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="x9j-QO-H9f">
                                 <rect key="frame" x="60" y="122" width="255.5" height="149.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAW-u0-sQM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAW-u0-sQM">
                                         <rect key="frame" x="0.0" y="0.0" width="255.5" height="31.5"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="27"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-Ev-EXo">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Berkeley Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vm7-Ev-EXo">
                                         <rect key="frame" x="0.0" y="36.5" width="255.5" height="19"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -88,6 +88,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-oW-Zcx">
+                                <rect key="frame" x="114" y="545" width="147" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lxk-dk-1iw" kind="show" id="nAy-nW-Q7c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,6 +113,7 @@
                             <constraint firstItem="WPL-Bi-Bii" firstAttribute="top" secondItem="x9j-QO-H9f" secondAttribute="bottom" constant="30" id="XN6-1e-7va"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Wn0-Af-FrN"/>
                     <connections>
                         <outlet property="emailTextField" destination="WuH-Wg-wYe" id="88A-54-vAI"/>
                         <outlet property="passwordTextField" destination="3WP-i5-Jed" id="1Z1-pj-RyI"/>
@@ -123,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9h-0f-I1K">
-                                <rect key="frame" x="286" y="614" width="57" height="34"/>
+                                <rect key="frame" x="312" y="614" width="57" height="40"/>
                                 <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="AMJ-iw-eee"/>
@@ -131,7 +144,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" red="0.18320022829999999" green="0.1132054314" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -168,25 +181,37 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZm-1R-SWn">
-                                <rect key="frame" x="22" y="614" width="140" height="34"/>
+                                <rect key="frame" x="131" y="614" width="66" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="Save Selected">
-                                    <color key="titleColor" red="0.18320022829999999" green="0.1132054314" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
                                 <connections>
                                     <action selector="saveSelectedItems:" destination="WQG-rG-B2Y" eventType="touchUpInside" id="d0Z-ea-rVh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iAT-y5-Ygf">
+                                <rect key="frame" x="25" y="608" width="69" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lxk-dk-1iw" kind="show" id="6LD-wb-Hcq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7e-19-dkP">
-                                <rect key="frame" x="190" y="614" width="72" height="34"/>
+                                <rect key="frame" x="218" y="614" width="72" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="Clear">
-                                    <color key="titleColor" red="0.18320022829999999" green="0.1132054314" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
                                 <connections>
@@ -211,10 +236,10 @@
             </objects>
             <point key="canvasLocation" x="-2066.4000000000001" y="-709.29535232383819"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Title-->
         <scene sceneID="1oP-2d-sJq">
             <objects>
-                <viewController id="DVk-e3-CDg" customClass="SignUpViewController" customModule="CalDining_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="DVk-e3-CDg" customClass="RegisterViewController" customModule="CalDining_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TZe-Us-6Al"/>
                         <viewControllerLayoutGuide type="bottom" id="lXI-BK-Cge"/>
@@ -231,7 +256,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="208" id="zqp-kr-0DX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                <state key="normal" title="Sign Up">
+                                <state key="normal" title="Register">
                                     <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -256,7 +281,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="iAn-Wk-TxS">
                                 <rect key="frame" x="60" y="78" width="255" height="266.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NId-sA-Nl6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NId-sA-Nl6">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="30.5"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="26"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -312,6 +337,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2D-DK-B1I">
+                                <rect key="frame" x="114" y="529" width="147" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Lxk-dk-1iw" kind="show" id="6So-gY-Tlc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -324,6 +361,7 @@
                             <constraint firstItem="TIY-Bw-Ntg" firstAttribute="top" secondItem="iAn-Wk-TxS" secondAttribute="bottom" constant="52.5" id="xRP-Ea-sR2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="FV8-8c-vlJ"/>
                     <connections>
                         <outlet property="emailTextField" destination="Ich-5J-M84" id="l1Y-LH-7ji"/>
                         <outlet property="nameTextField" destination="vR7-db-gpR" id="DiS-d5-JIG"/>
@@ -356,7 +394,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
                                 <state key="normal" title="Settings">
-                                    <color key="titleColor" red="0.18320022829999999" green="0.1132054314" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="WQG-rG-B2Y" kind="show" id="lUC-vR-6xp"/>
@@ -519,7 +557,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UDP-PK-dbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4633" y="-729"/>
+            <point key="canvasLocation" x="-4255" y="-1455"/>
         </scene>
         <!--Welcome-->
         <scene sceneID="1Ik-bo-jVv">
@@ -546,15 +584,52 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
-                                <rect key="frame" x="93" y="223" width="188" height="175"/>
+                                <rect key="frame" x="93" y="223" width="187" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
-                                    <rect key="frame" x="0.0" y="0.0" width="188" height="175"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="175"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jB-zX-XIJ">
+                                <rect key="frame" x="71" y="442" width="107" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BnP-Qt-kOA" kind="show" id="ljr-8T-2fS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asQ-DI-ScQ">
+                                <rect key="frame" x="113" y="506" width="147" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Skip the Line">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WQG-rG-B2Y" kind="show" id="NBH-lj-9TV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAB-ug-KXA">
+                                <rect key="frame" x="201" y="442" width="107" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DVk-e3-CDg" kind="show" id="zNq-A3-0lU"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="AUZ-6M-Guo"/>
                     </view>
                     <connections>
@@ -564,15 +639,17 @@
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-2687.1999999999998" y="-1458.6206896551726"/>
+            <point key="canvasLocation" x="-4522.3999999999996" y="-350.37481259370315"/>
         </scene>
     </scenes>
     <resources>
         <image name="logoGold.png" width="900" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="6LD-wb-Hcq"/>
         <segue reference="daw-4B-szf"/>
         <segue reference="2PF-gb-nTj"/>
+        <segue reference="2ZB-ad-Szf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98550945520401001" green="0.98115831613540649" blue="0.0070775304920971394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

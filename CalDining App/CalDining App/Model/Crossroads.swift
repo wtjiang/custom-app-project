@@ -155,13 +155,9 @@ class Crossroads {
                     }
                     for item in result.lunch {
                         todaysMenus["Lunch"]?.append(contentsOf: item.dishes)
-//                        print(item.name)
-//                        print(item.dishes)
                     }
                     for item in result.dinner {
                         todaysMenus["Dinner"]?.append(contentsOf: item.dishes)
-//                        print(item.name)
-//                        print(item.dishes)
                     }
                     for (meal, menu) in todaysMenus {
                         todaysMenusDict.updateValue([:], forKey: meal)
@@ -171,7 +167,6 @@ class Crossroads {
                             todaysMenusDict[meal] = inner
                         }
                     }
-                    //print(todaysMenus)
                     completion(todaysMenusDict)
                 } catch let err {
                     print("Err", err)

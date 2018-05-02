@@ -92,6 +92,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = menuTable.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.text = menuList[indexPath.row]
+        cell?.textLabel?.highlightedTextColor = UIColor(red:0.00, green:0.44, blue:0.73, alpha:1.0)
         if !checked[indexPath.row] {
             cell?.accessoryType = .none
         } else if checked[indexPath.row] {

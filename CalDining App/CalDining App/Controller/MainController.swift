@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class MainController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var pageController: UIPageControl!
     
@@ -83,10 +83,17 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 }
                 self.todaysMeals.updateValue(mealSum, forKey: "Crossroads \(meal)")
             }
-            print(self.todaysMeals)
             self.mealRecommendTable.reloadData()
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.mealRecommendTable.reloadData()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        self.mealRecommendTable.reloadData()
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
 //            return WMeals.count
@@ -107,12 +114,18 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        }
         if values >= lowerBound && values < middleBound {
             cell?.detailTextLabel?.text = "Not Recommended"
+            cell?.detailTextLabel?.textColor = UIColor(red:1.00, green:0.48, blue:0.48, alpha:1.0)
         } else if values >= middleBound && values < upperBound {
             cell?.detailTextLabel?.text = "Recommended"
+            cell?.detailTextLabel?.tintColor = UIColor(red:0.06, green:0.70, blue:0.16, alpha:1.0)
         } else if values >= upperBound {
             cell?.detailTextLabel?.text = "Highly Recommended"
+            cell?.detailTextLabel?.tintColor = UIColor(red:0.88, green:0.82, blue:0.18, alpha:1.0)
         } else {
             cell?.detailTextLabel?.text = "No Recommendation Available"
+
+            
+
         }
         
         return cell!

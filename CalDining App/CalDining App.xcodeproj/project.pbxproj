@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		44189E22209853BF0076D5E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E21209853BF0076D5E9 /* User.swift */; };
-		44189E282099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */; };
 		44189E2A2099CE1E0076D5E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */; };
-		44189E3D2099DD060076D5E9 /* logoGold.png in Resources */ = {isa = PBXBuildFile; fileRef = 44189E3B2099DD060076D5E9 /* logoGold.png */; };
-		44189E3E2099DD060076D5E9 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 44189E3C2099DD060076D5E9 /* logoWhite.png */; };
 		44189E432099EA080076D5E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E422099EA080076D5E9 /* LogInViewController.swift */; };
 		44189E452099EA150076D5E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E442099EA150076D5E9 /* RegisterViewController.swift */; };
+		4481D660209AD5AA006259A2 /* logoGold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65D209AD5A9006259A2 /* logoGold.png */; };
+		4481D661209AD5AA006259A2 /* berkeleyview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65E209AD5A9006259A2 /* berkeleyview.jpg */; };
+		4481D662209AD5AA006259A2 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65F209AD5AA006259A2 /* logoWhite.png */; };
 		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
@@ -26,13 +26,13 @@
 
 /* Begin PBXFileReference section */
 		44189E21209853BF0076D5E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ViewFromTopOfCampanile_MicahelDrummond.jpg; path = ../../../Desktop/ViewFromTopOfCampanile_MicahelDrummond.jpg; sourceTree = "<group>"; };
 		44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		44189E3B2099DD060076D5E9 /* logoGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold.png; path = ../../../../Desktop/logoGold.png; sourceTree = "<group>"; };
-		44189E3C2099DD060076D5E9 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = ../../../../Desktop/logoWhite.png; sourceTree = "<group>"; };
 		44189E412099E4450076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViewFromTopOfCampanile_MicahelDrummond.jpg; sourceTree = "<group>"; };
 		44189E422099EA080076D5E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		44189E442099EA150076D5E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4481D65D209AD5A9006259A2 /* logoGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold.png; path = "../../../custom-app-data/logos/logoGold.png"; sourceTree = "<group>"; };
+		4481D65E209AD5A9006259A2 /* berkeleyview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berkeleyview.jpg; path = "../../../custom-app-data/logos/berkeleyview.jpg"; sourceTree = "<group>"; };
+		4481D65F209AD5AA006259A2 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = "../../../custom-app-data/logos/logoWhite.png"; sourceTree = "<group>"; };
 		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		44CC709D20953CB0009A1420 /* Crossroads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossroads.swift; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,9 +59,10 @@
 		44189E342099DBBC0076D5E9 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				44189E3B2099DD060076D5E9 /* logoGold.png */,
+				4481D65E209AD5A9006259A2 /* berkeleyview.jpg */,
+				4481D65D209AD5A9006259A2 /* logoGold.png */,
+				4481D65F209AD5AA006259A2 /* logoWhite.png */,
 				44189E412099E4450076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */,
-				44189E3C2099DD060076D5E9 /* logoWhite.png */,
 			);
 			name = Pictures;
 			path = "New Group";
@@ -117,7 +118,6 @@
 			isa = PBXGroup;
 			children = (
 				44189E342099DBBC0076D5E9 /* Pictures */,
-				44189E262099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */,
 				44CC70942093D269009A1420 /* Model */,
 				44CC70932093D25B009A1420 /* View */,
 				44CC70912093D247009A1420 /* Controller */,
@@ -193,10 +193,10 @@
 			files = (
 				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
-				44189E3E2099DD060076D5E9 /* logoWhite.png in Resources */,
-				44189E282099C2640076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg in Resources */,
+				4481D662209AD5AA006259A2 /* logoWhite.png in Resources */,
 				6038A389207B3681006276F2 /* Main.storyboard in Resources */,
-				44189E3D2099DD060076D5E9 /* logoGold.png in Resources */,
+				4481D660209AD5AA006259A2 /* logoGold.png in Resources */,
+				4481D661209AD5AA006259A2 /* berkeleyview.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

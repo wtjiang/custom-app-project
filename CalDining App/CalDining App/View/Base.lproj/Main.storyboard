@@ -562,7 +562,6 @@
         <!--Welcome-->
         <scene sceneID="1Ik-bo-jVv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ij-84-ADe" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Welcome" id="Lxk-dk-1iw" customClass="WelcomeViewController" customModule="CalDining_App" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sge-jH-uX4"/>
@@ -638,6 +637,7 @@
                         <outlet property="logo" destination="PD5-1I-5pl" id="iIO-VW-C10"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ij-84-ADe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4522.3999999999996" y="-350.37481259370315"/>
         </scene>
@@ -647,9 +647,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6LD-wb-Hcq"/>
-        <segue reference="daw-4B-szf"/>
-        <segue reference="2PF-gb-nTj"/>
-        <segue reference="2ZB-ad-Szf"/>
+        <segue reference="zNq-A3-0lU"/>
+        <segue reference="NBH-lj-9TV"/>
+        <segue reference="ljr-8T-2fS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98550945520401001" green="0.98115831613540649" blue="0.0070775304920971394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

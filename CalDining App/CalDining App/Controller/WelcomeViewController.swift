@@ -27,7 +27,7 @@ class WelcomeViewController: UIViewController {
     }
     
     func assignbackground() {
-        let background = UIImage(named: "ViewFromTopOfCampanile_MicahelDrummond.jpg")
+        let background = UIImage(named: "berkeleyview.jpg")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)
         imageView.contentMode =  UIViewContentMode.scaleAspectFill

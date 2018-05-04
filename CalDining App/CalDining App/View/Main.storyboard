@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lxk-dk-1iw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lxk-dk-1iw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue-BoldItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Title-->
         <scene sceneID="Zfb-Sd-uU0">
@@ -578,10 +586,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGold1.png" translatesAutoresizingMaskIntoConstraints="NO" id="AwG-HP-htM">
-                                <rect key="frame" x="87" y="185.5" width="200" height="200"/>
+                                <rect key="frame" x="107" y="205.5" width="160" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="CNz-Ro-WTh"/>
-                                    <constraint firstAttribute="height" constant="200" id="ent-K0-fXw"/>
+                                    <constraint firstAttribute="width" constant="160" id="CNz-Ro-WTh"/>
+                                    <constraint firstAttribute="height" constant="160" id="ent-K0-fXw"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 The Cal Eats Group, Inc. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="A5B-Z5-S5s">
@@ -636,14 +644,14 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
-                                <rect key="frame" x="54.5" y="156" width="265" height="265"/>
+                                <rect key="frame" x="77" y="178.5" width="220" height="220"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
-                                    <rect key="frame" x="0.0" y="0.0" width="265" height="265"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="220"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="265" id="QrV-hi-cAp"/>
-                                    <constraint firstAttribute="width" constant="265" id="hSC-Dz-38w"/>
+                                    <constraint firstAttribute="height" constant="220" id="QrV-hi-cAp"/>
+                                    <constraint firstAttribute="width" constant="220" id="hSC-Dz-38w"/>
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>

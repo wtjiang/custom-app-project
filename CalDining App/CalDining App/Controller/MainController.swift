@@ -75,8 +75,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let crossroads = Crossroads(date: todaysDate)
         crossroads.getMenuFromJSON(date: todaysDate) { (result, resultsWithCategories) -> () in
             //self.menuWithWeightsCrossroads = result
-            print(result)
-            print(resultsWithCategories)
+//            print(result)
+//            print(resultsWithCategories)
             var todaysMenusDict = [String: [String: Double]]()
             for (meal, menu) in result {
                 todaysMenusDict.updateValue([:], forKey: meal)

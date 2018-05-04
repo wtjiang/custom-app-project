@@ -211,7 +211,7 @@
                                             <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3Ls-FZ-4fk" kind="show" id="i2s-gH-UJ1"/>
+                                            <segue destination="3Ls-FZ-4fk" kind="show" identifier="nextToForecast" id="i2s-gH-UJ1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -735,7 +735,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6LD-wb-Hcq"/>
-        <segue reference="vIH-z9-Sic"/>
+        <segue reference="i2s-gH-UJ1"/>
         <segue reference="zNq-A3-0lU"/>
         <segue reference="lUC-vR-6xp"/>
         <segue reference="ljr-8T-2fS"/>

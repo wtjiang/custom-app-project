@@ -13,9 +13,11 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var regButton: UIButton!
     @IBOutlet weak var logIn: UIButton!
-    @IBOutlet weak var logo: UIImageView!
+    //@IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var copyright: UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
+    @IBOutlet weak var logo: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +32,7 @@ class WelcomeViewController: UIViewController {
         regButton.layer.cornerRadius = 4
         logIn.layer.cornerRadius = 4
         skipButton.layer.cornerRadius = 4
-        //blur.frame.size = CGSize(width: 200, height: 200)
-        blur.layer.cornerRadius = blur.frame.size.height / 2.0
+        blur.layer.cornerRadius = blur.frame.size.width / 2.0
         blur.clipsToBounds = true
     }
     

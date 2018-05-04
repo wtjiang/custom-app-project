@@ -30,6 +30,8 @@ class WelcomeViewController: UIViewController {
         regButton.layer.cornerRadius = 4
         logIn.layer.cornerRadius = 4
         skipButton.layer.cornerRadius = 4
+        blur.layer.cornerRadius = blur.frame.size.width / 2.0
+        blur.clipsToBounds = true
     }
     
     override func viewWillLayoutSubviews() {

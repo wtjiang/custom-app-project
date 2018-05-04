@@ -640,17 +640,12 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
-                                <rect key="frame" x="94" y="224" width="175" height="175"/>
+                                <rect key="frame" x="94" y="224" width="187" height="175"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
-                                    <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="175"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="125"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

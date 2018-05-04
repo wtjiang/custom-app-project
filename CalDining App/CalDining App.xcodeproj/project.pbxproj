@@ -15,13 +15,13 @@
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
 		6038A386207B3681006276F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A385207B3681006276F2 /* ViewController.swift */; };
-		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; settings = {ASSET_TAGS = (PickDiningHall, ); }; };
 		6038A38B207B3681006276F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38A207B3681006276F2 /* Assets.xcassets */; };
 		6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38C207B3681006276F2 /* LaunchScreen.storyboard */; };
 		6088452C209C270300D08337 /* logoGold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452B209C270300D08337 /* logoGold1.png */; };
 		6088452E209C295100D08337 /* logoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452D209C295100D08337 /* logoBlack.png */; };
 		60884530209C295D00D08337 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452F209C295D00D08337 /* logoWhite.png */; };
 		60884532209C29B200D08337 /* berkeleyview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60884531209C29B200D08337 /* berkeleyview.jpg */; };
+		60884534209C2D1600D08337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60884533209C2D1600D08337 /* Main.storyboard */; };
 		60F18549209156B600DFEE3F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F18548209156B600DFEE3F /* MainController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,6 @@
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6038A383207B3681006276F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6038A385207B3681006276F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6038A388207B3681006276F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6038A38A207B3681006276F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6038A38D207B3681006276F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6038A38F207B3681006276F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +42,7 @@
 		6088452D209C295100D08337 /* logoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoBlack.png; path = "CalDining App/Pictures/logoBlack.png"; sourceTree = SOURCE_ROOT; };
 		6088452F209C295D00D08337 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = "CalDining App/Pictures/logoWhite.png"; sourceTree = SOURCE_ROOT; };
 		60884531209C29B200D08337 /* berkeleyview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berkeleyview.jpg; path = "CalDining App/Pictures/berkeleyview.jpg"; sourceTree = SOURCE_ROOT; };
+		60884533209C2D1600D08337 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		60F18548209156B600DFEE3F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +84,7 @@
 		44CC70932093D25B009A1420 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6038A387207B3681006276F2 /* Main.storyboard */,
+				60884533209C2D1600D08337 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,7 +195,7 @@
 				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
 				6088452C209C270300D08337 /* logoGold1.png in Resources */,
-				6038A389207B3681006276F2 /* Main.storyboard in Resources */,
+				60884534209C2D1600D08337 /* Main.storyboard in Resources */,
 				6088452E209C295100D08337 /* logoBlack.png in Resources */,
 				60884532209C29B200D08337 /* berkeleyview.jpg in Resources */,
 				60884530209C295D00D08337 /* logoWhite.png in Resources */,
@@ -224,14 +224,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6038A387207B3681006276F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6038A388207B3681006276F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6038A38C207B3681006276F2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

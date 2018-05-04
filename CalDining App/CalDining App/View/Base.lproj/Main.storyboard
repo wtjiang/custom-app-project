@@ -584,24 +584,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-1I-5pl">
-                                <rect key="frame" x="-227" y="54" width="828" height="559"/>
+                                <rect key="frame" x="-227.5" y="54" width="828" height="559"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="828" id="Df0-v7-C7q"/>
                                 </constraints>
-                            </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
-                                <rect key="frame" x="93" y="223" width="187" height="175"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
-                                    <rect key="frame" x="0.0" y="0.0" width="187" height="175"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="125"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                            </visualEffectView>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jB-zX-XIJ">
                                 <rect key="frame" x="71" y="442" width="107" height="36"/>
                                 <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -647,6 +639,19 @@
                                     <segue destination="WQG-rG-B2Y" kind="show" id="NBH-lj-9TV"/>
                                 </connections>
                             </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
+                                <rect key="frame" x="94" y="224" width="175" height="175"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
+                                    <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="125"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>

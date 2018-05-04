@@ -27,7 +27,6 @@
 /* Begin PBXFileReference section */
 		44189E21209853BF0076D5E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		44189E412099E4450076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ViewFromTopOfCampanile_MicahelDrummond.jpg; sourceTree = "<group>"; };
 		44189E422099EA080076D5E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		44189E442099EA150076D5E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4481D65D209AD5A9006259A2 /* logoGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold.png; path = "../../../custom-app-data/logos/logoGold.png"; sourceTree = "<group>"; };
@@ -62,7 +61,6 @@
 				4481D65E209AD5A9006259A2 /* berkeleyview.jpg */,
 				4481D65D209AD5A9006259A2 /* logoGold.png */,
 				4481D65F209AD5AA006259A2 /* logoWhite.png */,
-				44189E412099E4450076D5E9 /* ViewFromTopOfCampanile_MicahelDrummond.jpg */,
 			);
 			name = Pictures;
 			path = "New Group";

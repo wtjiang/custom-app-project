@@ -32,6 +32,11 @@ class WelcomeViewController: UIViewController {
         skipButton.layer.cornerRadius = 4
     }
     
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        blur.layer.cornerRadius = blur.frame.height / 2.0
+    }
+
     func assignBackground() {
         let background = UIImage(named: "berkeleyview.jpg")
         var imageView : UIImageView!

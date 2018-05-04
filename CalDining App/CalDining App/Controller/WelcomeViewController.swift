@@ -13,9 +13,11 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var skipButton: UIButton!
     @IBOutlet weak var regButton: UIButton!
     @IBOutlet weak var logIn: UIButton!
-    @IBOutlet weak var logo: UIImageView!
+    //@IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var copyright: UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
+    @IBOutlet weak var logo: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

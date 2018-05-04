@@ -20,10 +20,8 @@ class CKC {
     init(date: String) {
         todaysDate = date
     }
-    let testMenu = "https://cal-eats-server.herokuapp.com/current_crossroads"
-    let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
-    //    let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
-    //    let crossroadsW = ["Brunch": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "BREAKFAST PLATE", "GOLDEN GRILL", "ITALIAN CORNER", "PASTAS", "SMOOTHIES", "SPECIALTY SALADS"], "Dinner": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "CAL-ZONE", "GOLDEN GRILL", "PASTAS", "SPECIALTY SALADS", "THE BIG C"]]
+
+    let menu = "https://cal-eats-server.herokuapp.com/0/Clark_Kerr_Campus"
     
     //reads json data from link, returns menus for recommendation (todaysMenus) and menus for display (todaysMenusCategories)
     func getMenuFromJSON(date: String, completion: @escaping ([String: [String]], [String: [String: [String]]]) -> ()) {
@@ -84,10 +82,9 @@ class CKC {
                 }.resume()
         } else {
             struct WeekdayMenu: Decodable {
-                private enum CodingKeys : String, CodingKey { case breakfast = "Breakfast", lunch = "Lunch", dinner = "Dinner" }
+                private enum CodingKeys : String, CodingKey { case breakfast = "Breakfast", dinner = "Dinner" }
                 
                 let breakfast: [Category]
-                let lunch: [Category]
                 let dinner: [Category]
                 
                 init(from decoder: Decoder) throws {
@@ -96,10 +93,6 @@ class CKC {
                     let breakfast = try container.decode([String:[String]].self, forKey: .breakfast)
                     let breakfastKeys = breakfast.keys.sorted()
                     self.breakfast = breakfastKeys.map { Category(name: $0, dishes: breakfast[$0]!) }
-                    
-                    let lunch = try container.decode([String:[String]].self, forKey: .lunch)
-                    let lunchKeys = lunch.keys.sorted()
-                    self.lunch = lunchKeys.map { Category(name: $0, dishes: lunch[$0]!) }
                     
                     let dinner = try container.decode([String:[String]].self, forKey: .dinner)
                     let dinnerKeys = dinner.keys.sorted()
@@ -117,10 +110,8 @@ class CKC {
                 guard let data = data else { return }
                 do {
                     todaysMenus.updateValue([], forKey: "Breakfast")
-                    todaysMenus.updateValue([], forKey: "Lunch")
                     todaysMenus.updateValue([], forKey: "Dinner")
                     todaysMenusCategories.updateValue([:], forKey: "Breakfast")
-                    todaysMenusCategories.updateValue([:], forKey: "Lunch")
                     todaysMenusCategories.updateValue([:], forKey: "Dinner")
                     
                     let result = try JSONDecoder().decode(WeekdayMenu.self, from: data)
@@ -129,12 +120,6 @@ class CKC {
                         var inner: [String: [String]] = todaysMenusCategories["Breakfast"]!
                         inner[item.name] = item.dishes
                         todaysMenusCategories["Breakfast"] = inner
-                    }
-                    for item in result.lunch {
-                        todaysMenus["Lunch"]?.append(contentsOf: item.dishes)
-                        var inner: [String: [String]] = todaysMenusCategories["Lunch"]!
-                        inner[item.name] = item.dishes
-                        todaysMenusCategories["Lunch"] = inner
                     }
                     for item in result.dinner {
                         todaysMenus["Dinner"]?.append(contentsOf: item.dishes)

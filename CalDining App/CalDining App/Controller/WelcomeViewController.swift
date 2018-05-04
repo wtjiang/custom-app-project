@@ -10,6 +10,9 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var regButton: UIButton!
+    @IBOutlet weak var logIn: UIButton!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var copyright: UILabel!
     @IBOutlet weak var blur: UIVisualEffectView!
@@ -24,6 +27,9 @@ class WelcomeViewController: UIViewController {
 //        view.addSubview(blurView)
         assignbackground()
         self.view.bringSubview(toFront: logo)
+        regButton.layer.cornerRadius = 4
+        logIn.layer.cornerRadius = 4
+        skipButton.layer.cornerRadius = 4
     }
     
     func assignbackground() {

@@ -64,9 +64,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             checked = [Bool](repeating: false, count:menuList.count)
             checkedRows = [IndexPath]()
         }
-        nextButton.layer.cornerRadius = 4
-        saveSelected.layer.cornerRadius = 4
-        clearAll.layer.cornerRadius = 4
+//        nextButton.layer.cornerRadius = 4
+//        saveSelected.layer.cornerRadius = 4
+//        clearAll.layer.cornerRadius = 4
     }
     
     func makeSavedAlert() {

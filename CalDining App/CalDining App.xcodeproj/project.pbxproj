@@ -13,6 +13,7 @@
 		44189E452099EA150076D5E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E442099EA150076D5E9 /* RegisterViewController.swift */; };
 		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
+		44E81FC2209CE3EA003BABAD /* LaunchLogo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
 		6038A386207B3681006276F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A385207B3681006276F2 /* ViewController.swift */; };
 		6038A38B207B3681006276F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38A207B3681006276F2 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		44189E442099EA150076D5E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		44CC709D20953CB0009A1420 /* Crossroads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossroads.swift; sourceTree = "<group>"; };
+		44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchLogo.storyboard; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6038A383207B3681006276F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6038A385207B3681006276F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				6038A38A207B3681006276F2 /* Assets.xcassets */,
 				6038A38C207B3681006276F2 /* LaunchScreen.storyboard */,
 				6038A38F207B3681006276F2 /* Info.plist */,
+				44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */,
 			);
 			path = "CalDining App";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E81FC2209CE3EA003BABAD /* LaunchLogo.storyboard in Resources */,
 				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
 				6088452C209C270300D08337 /* logoGold1.png in Resources */,

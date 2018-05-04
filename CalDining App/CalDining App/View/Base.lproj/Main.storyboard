@@ -596,6 +596,11 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
                                 <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jB-zX-XIJ">
                                 <rect key="frame" x="71" y="442" width="107" height="36"/>
@@ -665,7 +670,7 @@
                         <viewLayoutGuide key="safeArea" id="AUZ-6M-Guo"/>
                     </view>
                     <connections>
-                        <outlet property="blur" destination="IjJ-by-CbP" id="HOC-Uc-boS"/>
+                        <outlet property="blur" destination="IjJ-by-CbP" id="4oI-le-Ysh"/>
                         <outlet property="copyright" destination="A5B-Z5-S5s" id="FJN-Eu-eAL"/>
                         <outlet property="logIn" destination="1jB-zX-XIJ" id="3gy-g0-IjE"/>
                         <outlet property="logo" destination="PD5-1I-5pl" id="iIO-VW-C10"/>

@@ -30,7 +30,6 @@ class WelcomeViewController: UIViewController {
         regButton.layer.cornerRadius = 4
         logIn.layer.cornerRadius = 4
         skipButton.layer.cornerRadius = 4
-        blur.layer.cornerRadius = 20
     }
     
     func assignBackground() {
@@ -66,3 +65,4 @@ class WelcomeViewController: UIViewController {
     */
 
 }
+

@@ -1,13 +1,20 @@
 //
+//  CKC.swift
+//  CalDining App
+//
+//  Created by Winston Jiang on 5/4/18.
+//  Copyright © 2018 Jagpinder, Manan, Winston. All rights reserved.
+//
+
+import Foundation
+//
 //  Crossroads.swift
 //  CalDining App
 //
 //  Created by Winston Jiang on 4/28/18.
 //  Copyright © 2018 Jagpinder, Manan, Winston. All rights reserved.
 //
-
-import Foundation
-class Crossroads {
+class CKC {
     
     var todaysDate: String
     init(date: String) {
@@ -15,9 +22,9 @@ class Crossroads {
     }
     let testMenu = "https://cal-eats-server.herokuapp.com/current_crossroads"
     let menu = "https://cal-eats-server.herokuapp.com/0/Crossroads"
-//    let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
-//    let crossroadsW = ["Brunch": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "BREAKFAST PLATE", "GOLDEN GRILL", "ITALIAN CORNER", "PASTAS", "SMOOTHIES", "SPECIALTY SALADS"], "Dinner": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "CAL-ZONE", "GOLDEN GRILL", "PASTAS", "SPECIALTY SALADS", "THE BIG C"]]
-
+    //    let crossroadsMF = ["Breakfast":["BEAR FIT","BEAR FUSION","HOT MORNING GRAINS","SMOOTHIES","THE BIG C"], "Lunch": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"], "Dinner": ["BEAR FIT","BEAR FUSION","BEAR NECESSITIES","BEAR SWEETS","CAL-ZONE","GOLDEN GRILL","PASTAS","SPECIALTY SALADS","THE BIG C"]]
+    //    let crossroadsW = ["Brunch": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "BREAKFAST PLATE", "GOLDEN GRILL", "ITALIAN CORNER", "PASTAS", "SMOOTHIES", "SPECIALTY SALADS"], "Dinner": ["BEAR FIT", "BEAR FUSION", "BEAR NECESSITIES", "BEAR SWEETS", "CAL-ZONE", "GOLDEN GRILL", "PASTAS", "SPECIALTY SALADS", "THE BIG C"]]
+    
     //reads json data from link, returns menus for recommendation (todaysMenus) and menus for display (todaysMenusCategories)
     func getMenuFromJSON(date: String, completion: @escaping ([String: [String]], [String: [String: [String]]]) -> ()) {
         var todaysMenus = [String: [String]]()
@@ -43,7 +50,7 @@ class Crossroads {
                 let name : String
                 let dishes : [String]
             }
-
+            
             guard let menuURL = URL(string: menu) else { return }
             URLSession.shared.dataTask(with: menuURL) { (data, response
                 , error) in
@@ -53,7 +60,7 @@ class Crossroads {
                     todaysMenus.updateValue([], forKey: "Dinner")
                     todaysMenusCategories.updateValue([:], forKey: "Brunch")
                     todaysMenusCategories.updateValue([:], forKey: "Dinner")
-
+                    
                     let result = try JSONDecoder().decode(WeekendMenu.self, from: data)
                     for item in result.brunch {
                         todaysMenus["Brunch"]?.append(contentsOf: item.dishes)
@@ -93,7 +100,7 @@ class Crossroads {
                     let lunch = try container.decode([String:[String]].self, forKey: .lunch)
                     let lunchKeys = lunch.keys.sorted()
                     self.lunch = lunchKeys.map { Category(name: $0, dishes: lunch[$0]!) }
-
+                    
                     let dinner = try container.decode([String:[String]].self, forKey: .dinner)
                     let dinnerKeys = dinner.keys.sorted()
                     self.dinner = dinnerKeys.map { Category(name: $0, dishes: dinner[$0]!) }
@@ -103,7 +110,7 @@ class Crossroads {
                 let name : String
                 let dishes : [String]
             }
-
+            
             guard let menuURL = URL(string: menu) else { return }
             URLSession.shared.dataTask(with: menuURL) { (data, response
                 , error) in
@@ -115,7 +122,7 @@ class Crossroads {
                     todaysMenusCategories.updateValue([:], forKey: "Breakfast")
                     todaysMenusCategories.updateValue([:], forKey: "Lunch")
                     todaysMenusCategories.updateValue([:], forKey: "Dinner")
-
+                    
                     let result = try JSONDecoder().decode(WeekdayMenu.self, from: data)
                     for item in result.breakfast {
                         todaysMenus["Breakfast"]?.append(contentsOf: item.dishes)

@@ -188,9 +188,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "nextToForecast") {
-            let vc = segue.destination as! MainController
-            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-            vc.daysIndex = days.index(of: currentUser.todaysDate)!
+//            let vc = segue.destination as! MainController
+//            let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+//            vc.daysIndex = days.index(of: currentUser.todaysDate)!
         }
     }
     

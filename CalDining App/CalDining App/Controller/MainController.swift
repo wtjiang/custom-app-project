@@ -103,12 +103,11 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
-//    //FIXME
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if (segue.identifier == "_FIXME_") {
-//            let vc = segue.destination as! MainController
-//        }
-//    }
+
+    //FIXME
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 
     override func viewWillAppear(_ animated: Bool) {
@@ -118,6 +117,13 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.mealRecommendTable.reloadData()
     }
 
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        performSegue(withIdentifier: "segueToMenu", sender: cell)
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
 //            return WMeals.count
@@ -147,9 +153,6 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell?.detailTextLabel?.textColor = UIColor(red:0.88, green:0.82, blue:0.18, alpha:1.0)
         } else {
             cell?.detailTextLabel?.text = "No Recommendation Available"
-
-            
-
         }
         
         return cell!

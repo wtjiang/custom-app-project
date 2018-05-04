@@ -211,7 +211,7 @@
                                             <color key="titleShadowColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="3Ls-FZ-4fk" kind="show" identifier="nextToForecast" id="pvN-HO-MlU"/>
+                                            <segue destination="3Ls-FZ-4fk" kind="show" id="i2s-gH-UJ1"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -242,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYI-7T-ncP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2066.4000000000001" y="-709.29535232383819"/>
+            <point key="canvasLocation" x="-2418" y="-710"/>
         </scene>
         <!--Title-->
         <scene sceneID="1oP-2d-sJq">
@@ -451,6 +451,14 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.82837989879999996" green="0.97331599420000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <segue destination="URj-fF-Lha" kind="popoverPresentation" identifier="segueToMenu" popoverAnchorView="RFg-Hz-c8W" id="Pvh-iv-XX0">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                                <popoverPassthroughViews>
+                                                    <tableView reference="RFg-Hz-c8W"/>
+                                                </popoverPassthroughViews>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -486,6 +494,7 @@
                             <constraint firstAttribute="trailing" secondItem="RFg-Hz-c8W" secondAttribute="trailing" id="yLd-2u-SdZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="q0O-Ov-gYG"/>
                     <connections>
                         <outlet property="mealRecommendTable" destination="RFg-Hz-c8W" id="jeq-MR-0eS"/>
                         <outlet property="pageController" destination="ieS-gJ-kNa" id="ruE-dR-PvV"/>
@@ -494,7 +503,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhL-hb-gzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2066.4000000000001" y="101.19940029985008"/>
+            <point key="canvasLocation" x="-2419" y="257"/>
+        </scene>
+        <!--Menu List View Controller-->
+        <scene sceneID="QDx-nn-LUH">
+            <objects>
+                <viewController id="URj-fF-Lha" customClass="MenuListViewController" customModule="CalDining_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tOX-Oc-gcn"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Gg-hu-MpZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRh-BA-IKt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Menus Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-VO-3A0">
+                                <rect key="frame" x="56" y="231" width="263" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mYD-5x-TYb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Today's Menu" id="c0c-R7-ENY">
+                                        <barButtonItem key="leftBarButtonItem" title="Done" id="EKG-AF-T0F">
+                                            <color key="tintColor" red="0.25106556140000003" green="0.45989661409999999" blue="0.8921851516" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <segue destination="3Ls-FZ-4fk" kind="show" id="vIH-z9-Sic"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wXM-6E-0Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1783" y="257"/>
         </scene>
         <!--Set-Up View Controller-->
         <scene sceneID="bdT-Du-W3D">
@@ -684,9 +734,10 @@
         <image name="logoGold1.png" width="900" height="900"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6So-gY-Tlc"/>
+        <segue reference="6LD-wb-Hcq"/>
+        <segue reference="vIH-z9-Sic"/>
         <segue reference="zNq-A3-0lU"/>
-        <segue reference="NBH-lj-9TV"/>
+        <segue reference="lUC-vR-6xp"/>
         <segue reference="ljr-8T-2fS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98550945520401001" green="0.98115831613540649" blue="0.0070775304920971394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

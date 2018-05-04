@@ -25,14 +25,15 @@ class WelcomeViewController: UIViewController {
 //        blurView.frame.size = CGSize(width: 130, height: 180)
 //        blurView.center = logo.center
 //        view.addSubview(blurView)
-        assignbackground()
+        assignBackground()
         self.view.bringSubview(toFront: logo)
         regButton.layer.cornerRadius = 4
         logIn.layer.cornerRadius = 4
         skipButton.layer.cornerRadius = 4
+        blur.layer.cornerRadius = 20
     }
     
-    func assignbackground() {
+    func assignBackground() {
         let background = UIImage(named: "berkeleyview.jpg")
         var imageView : UIImageView!
         imageView = UIImageView(frame: view.bounds)

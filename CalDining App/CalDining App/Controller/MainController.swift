@@ -70,11 +70,12 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let todaysDate = dateFormatter.string(from: Date()).capitalized
         return todaysDate
     }
-    
+    //var crossroadsMenuToday =
     func recommendCrossroads() {
         let crossroads = Crossroads(date: todaysDate)
         crossroads.getMenuFromJSON(date: todaysDate) { (result) -> () in
             self.menuWithWeightsCrossroads = result
+            print(self.menuWithWeightsCrossroads)
             for (meal, dish) in self.menuWithWeightsCrossroads {
                 var mealSum = 0.0
                 for (item, _) in dish {
@@ -89,6 +90,13 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
     }
+//    //FIXME
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if (segue.identifier == "_FIXME_") {
+//            let vc = segue.destination as! MainController
+//        }
+//    }
+
 
     override func viewWillAppear(_ animated: Bool) {
         self.mealRecommendTable.reloadData()

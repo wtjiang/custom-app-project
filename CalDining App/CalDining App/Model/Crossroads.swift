@@ -106,6 +106,7 @@ class Crossroads {
                     }
                 } catch let err {
                     print("Err", err)
+                    completion(["Menus Unavailable Today": ["": 0.0]])
                 }
                 }.resume()
         } else {
@@ -168,6 +169,7 @@ class Crossroads {
                     }
                 } catch let err {
                     print("Err", err)
+                    completion(["Menus Unavailable Today": ["": 0.0]])
                 }}.resume()
         }
     }

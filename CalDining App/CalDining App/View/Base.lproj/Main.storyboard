@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lxk-dk-1iw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Lxk-dk-1iw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="ArialRoundedMTBold.ttf">
-            <string>ArialRoundedMTBold</string>
-        </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue-BoldItalic</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Title-->
         <scene sceneID="Zfb-Sd-uU0">
@@ -585,19 +577,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGold1.png" translatesAutoresizingMaskIntoConstraints="NO" id="AwG-HP-htM">
-                                <rect key="frame" x="87" y="185.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="CNz-Ro-WTh"/>
-                                    <constraint firstAttribute="height" constant="200" id="ent-K0-fXw"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018 The Cal Eats Group, Inc. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="A5B-Z5-S5s">
                                 <rect key="frame" x="18" y="626" width="340" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGold.png" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-1I-5pl">
+                                <rect key="frame" x="-227.5" y="54" width="828" height="559"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="828" id="Df0-v7-C7q"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="125"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jB-zX-XIJ">
                                 <rect key="frame" x="71" y="442" width="107" height="36"/>
                                 <color key="backgroundColor" red="0.8921851516" green="0.8218685389" blue="0.431343317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -644,6 +640,7 @@
                                 </connections>
                             </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
                             <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
                                 <rect key="frame" x="94" y="224" width="175" height="175"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
@@ -654,28 +651,33 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
                                     <rect key="frame" x="0.0" y="0.0" width="265" height="265"/>
 >>>>>>> a391fe1192d4605c28bc1f1bd5f6fb1dac81b349
+=======
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjJ-by-CbP">
+                                <rect key="frame" x="94" y="224" width="187" height="175"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wbf-dk-r85">
+                                    <rect key="frame" x="0.0" y="0.0" width="187" height="175"/>
+>>>>>>> parent of a391fe1... welcome logo fix
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="265" id="QrV-hi-cAp"/>
-                                    <constraint firstAttribute="width" constant="265" id="hSC-Dz-38w"/>
-                                </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="AUZ-6M-Guo" firstAttribute="bottom" secondItem="IjJ-by-CbP" secondAttribute="bottom" constant="269" id="4px-Va-gPx"/>
                             <constraint firstAttribute="trailing" secondItem="A5B-Z5-S5s" secondAttribute="trailing" constant="17.5" id="5Dy-Hh-NZt"/>
-                            <constraint firstItem="AwG-HP-htM" firstAttribute="centerX" secondItem="YpL-v0-s29" secondAttribute="centerX" id="Cus-00-Z7R"/>
-                            <constraint firstItem="IjJ-by-CbP" firstAttribute="centerY" secondItem="YpL-v0-s29" secondAttribute="centerY" constant="-45" id="FHu-te-63X"/>
+                            <constraint firstItem="PD5-1I-5pl" firstAttribute="top" secondItem="sge-jH-uX4" secondAttribute="bottom" constant="34" id="8kf-sf-QAq"/>
+                            <constraint firstItem="PD5-1I-5pl" firstAttribute="centerY" secondItem="YpL-v0-s29" secondAttribute="centerY" id="Af2-Mt-hiK"/>
+                            <constraint firstItem="AUZ-6M-Guo" firstAttribute="trailing" secondItem="IjJ-by-CbP" secondAttribute="trailing" constant="95" id="E06-Ak-SkX"/>
                             <constraint firstItem="1jB-zX-XIJ" firstAttribute="leading" secondItem="AUZ-6M-Guo" secondAttribute="leading" constant="71" id="GsY-mD-GTU"/>
                             <constraint firstItem="A5B-Z5-S5s" firstAttribute="leading" secondItem="AUZ-6M-Guo" secondAttribute="leading" constant="17.5" id="MYW-mY-19u"/>
                             <constraint firstItem="AUZ-6M-Guo" firstAttribute="bottom" secondItem="EAB-ug-KXA" secondAttribute="bottom" constant="189" id="Pld-B7-6sQ"/>
-                            <constraint firstItem="IjJ-by-CbP" firstAttribute="centerX" secondItem="YpL-v0-s29" secondAttribute="centerX" id="QGv-yO-fHD"/>
-                            <constraint firstItem="AwG-HP-htM" firstAttribute="centerY" secondItem="YpL-v0-s29" secondAttribute="centerY" constant="-48" id="WeV-Oa-taT"/>
+                            <constraint firstItem="IjJ-by-CbP" firstAttribute="centerX" secondItem="PD5-1I-5pl" secondAttribute="centerX" id="VSn-L4-6K5"/>
                             <constraint firstItem="AUZ-6M-Guo" firstAttribute="trailing" secondItem="EAB-ug-KXA" secondAttribute="trailing" constant="67" id="YbY-2r-ZYf"/>
                             <constraint firstItem="asQ-DI-ScQ" firstAttribute="centerX" secondItem="YpL-v0-s29" secondAttribute="centerX" id="cBa-90-cYi"/>
                             <constraint firstItem="AUZ-6M-Guo" firstAttribute="bottom" secondItem="A5B-Z5-S5s" secondAttribute="bottom" constant="20" id="cZH-zw-EZM"/>
+                            <constraint firstItem="IjJ-by-CbP" firstAttribute="leading" secondItem="AUZ-6M-Guo" secondAttribute="leading" constant="93" id="py6-bs-fZt"/>
+                            <constraint firstItem="IjJ-by-CbP" firstAttribute="top" secondItem="sge-jH-uX4" secondAttribute="bottom" constant="203" id="sBm-nr-w4P"/>
                             <constraint firstItem="AUZ-6M-Guo" firstAttribute="bottom" secondItem="1jB-zX-XIJ" secondAttribute="bottom" constant="189" id="sxw-zE-YSR"/>
                             <constraint firstItem="AUZ-6M-Guo" firstAttribute="bottom" secondItem="asQ-DI-ScQ" secondAttribute="bottom" constant="125" id="vms-es-BXa"/>
                         </constraints>
@@ -685,7 +687,7 @@
                         <outlet property="blur" destination="IjJ-by-CbP" id="4oI-le-Ysh"/>
                         <outlet property="copyright" destination="A5B-Z5-S5s" id="FJN-Eu-eAL"/>
                         <outlet property="logIn" destination="1jB-zX-XIJ" id="3gy-g0-IjE"/>
-                        <outlet property="logo" destination="AwG-HP-htM" id="U6R-cF-CRz"/>
+                        <outlet property="logo" destination="PD5-1I-5pl" id="iIO-VW-C10"/>
                         <outlet property="regButton" destination="EAB-ug-KXA" id="rPp-ek-11I"/>
                         <outlet property="skipButton" destination="asQ-DI-ScQ" id="lsE-sb-RvP"/>
                     </connections>
@@ -696,10 +698,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logoGold1.png" width="900" height="900"/>
+        <image name="logoGold.png" width="900" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6So-gY-Tlc"/>
+        <segue reference="6LD-wb-Hcq"/>
         <segue reference="zNq-A3-0lU"/>
         <segue reference="NBH-lj-9TV"/>
         <segue reference="ljr-8T-2fS"/>

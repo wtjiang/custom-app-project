@@ -11,6 +11,9 @@
 		44189E2A2099CE1E0076D5E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */; };
 		44189E432099EA080076D5E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E422099EA080076D5E9 /* LogInViewController.swift */; };
 		44189E452099EA150076D5E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E442099EA150076D5E9 /* RegisterViewController.swift */; };
+		4481D660209AD5AA006259A2 /* logoGold.png in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65D209AD5A9006259A2 /* logoGold.png */; };
+		4481D661209AD5AA006259A2 /* berkeleyview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65E209AD5A9006259A2 /* berkeleyview.jpg */; };
+		4481D662209AD5AA006259A2 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 4481D65F209AD5AA006259A2 /* logoWhite.png */; };
 		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
@@ -18,10 +21,6 @@
 		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; settings = {ASSET_TAGS = (PickDiningHall, ); }; };
 		6038A38B207B3681006276F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38A207B3681006276F2 /* Assets.xcassets */; };
 		6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38C207B3681006276F2 /* LaunchScreen.storyboard */; };
-		6088452C209C270300D08337 /* logoGold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452B209C270300D08337 /* logoGold1.png */; };
-		6088452E209C295100D08337 /* logoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452D209C295100D08337 /* logoBlack.png */; };
-		60884530209C295D00D08337 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452F209C295D00D08337 /* logoWhite.png */; };
-		60884532209C29B200D08337 /* berkeleyview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60884531209C29B200D08337 /* berkeleyview.jpg */; };
 		60F18549209156B600DFEE3F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F18548209156B600DFEE3F /* MainController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +29,9 @@
 		44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		44189E422099EA080076D5E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		44189E442099EA150076D5E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4481D65D209AD5A9006259A2 /* logoGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold.png; path = "../../../custom-app-data/logos/logoGold.png"; sourceTree = "<group>"; };
+		4481D65E209AD5A9006259A2 /* berkeleyview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berkeleyview.jpg; path = "../../../custom-app-data/logos/berkeleyview.jpg"; sourceTree = "<group>"; };
+		4481D65F209AD5AA006259A2 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = "../../../custom-app-data/logos/logoWhite.png"; sourceTree = "<group>"; };
 		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		44CC709D20953CB0009A1420 /* Crossroads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossroads.swift; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,10 +41,6 @@
 		6038A38A207B3681006276F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6038A38D207B3681006276F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6038A38F207B3681006276F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6088452B209C270300D08337 /* logoGold1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold1.png; path = "CalDining App/Pictures/logoGold1.png"; sourceTree = SOURCE_ROOT; };
-		6088452D209C295100D08337 /* logoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoBlack.png; path = "CalDining App/Pictures/logoBlack.png"; sourceTree = SOURCE_ROOT; };
-		6088452F209C295D00D08337 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = "CalDining App/Pictures/logoWhite.png"; sourceTree = SOURCE_ROOT; };
-		60884531209C29B200D08337 /* berkeleyview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berkeleyview.jpg; path = "CalDining App/Pictures/berkeleyview.jpg"; sourceTree = SOURCE_ROOT; };
 		60F18548209156B600DFEE3F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,10 +58,9 @@
 		44189E342099DBBC0076D5E9 /* Pictures */ = {
 			isa = PBXGroup;
 			children = (
-				60884531209C29B200D08337 /* berkeleyview.jpg */,
-				6088452B209C270300D08337 /* logoGold1.png */,
-				6088452D209C295100D08337 /* logoBlack.png */,
-				6088452F209C295D00D08337 /* logoWhite.png */,
+				4481D65E209AD5A9006259A2 /* berkeleyview.jpg */,
+				4481D65D209AD5A9006259A2 /* logoGold.png */,
+				4481D65F209AD5AA006259A2 /* logoWhite.png */,
 			);
 			name = Pictures;
 			path = "New Group";
@@ -194,11 +191,10 @@
 			files = (
 				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
-				6088452C209C270300D08337 /* logoGold1.png in Resources */,
+				4481D662209AD5AA006259A2 /* logoWhite.png in Resources */,
 				6038A389207B3681006276F2 /* Main.storyboard in Resources */,
-				6088452E209C295100D08337 /* logoBlack.png in Resources */,
-				60884532209C29B200D08337 /* berkeleyview.jpg in Resources */,
-				60884530209C295D00D08337 /* logoWhite.png in Resources */,
+				4481D660209AD5AA006259A2 /* logoGold.png in Resources */,
+				4481D661209AD5AA006259A2 /* berkeleyview.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

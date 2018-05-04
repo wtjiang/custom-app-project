@@ -26,18 +26,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoGold1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rie-eT-jVB">
-                                <rect key="frame" x="106" y="253" width="160" height="160"/>
+                                <rect key="frame" x="107" y="205.5" width="160" height="160"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63362114459999996" green="0.87598741609999997" blue="0.99405124609999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="GXx-6W-a6P" secondAttribute="bottom" constant="20" symbolic="YES" id="6cc-FM-NcF"/>
-                            <constraint firstItem="Rie-eT-jVB" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="106" id="8gq-cS-cNM"/>
-                            <constraint firstItem="Rie-eT-jVB" firstAttribute="centerX" secondItem="GXx-6W-a6P" secondAttribute="centerX" id="9ar-4s-KRc"/>
-                            <constraint firstItem="Rie-eT-jVB" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="233" id="AM5-2g-WnC"/>
-                            <constraint firstItem="Rie-eT-jVB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VOi-aR-mlY"/>
+                            <constraint firstItem="Rie-eT-jVB" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="107" id="8gq-cS-cNM"/>
+                            <constraint firstItem="Rie-eT-jVB" firstAttribute="centerX" secondItem="GXx-6W-a6P" secondAttribute="centerX" constant="1" id="9ar-4s-KRc"/>
+                            <constraint firstItem="Rie-eT-jVB" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="185.5" id="AM5-2g-WnC"/>
+                            <constraint firstItem="Rie-eT-jVB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-48" id="VOi-aR-mlY"/>
                             <constraint firstItem="GXx-6W-a6P" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="gtS-C4-LOV"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Rie-eT-jVB" secondAttribute="trailing" constant="109" id="pxD-CO-gww"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="Rie-eT-jVB" secondAttribute="trailing" constant="108" id="pxD-CO-gww"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                     </view>

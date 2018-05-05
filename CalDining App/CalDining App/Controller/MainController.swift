@@ -54,18 +54,18 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         
         daysIndex = days.index(of: currentUser.todaysDate)!
-        mealRecommendTable.delegate = self
-        mealRecommendTable.dataSource = self
 
         selectedCells = defaults.object(forKey: "selectedCells") as? [String] ?? [String]()
         selectedCellsWeights = defaults.object(forKey: "selectedCellsWeights") as? [Double] ?? [Double]()
         selectedCellsDict = defaults.object(forKey: "selectedCellsDict") as? [String : Double] ?? [String : Double]()
         
         todaysDate = dayOfWeek()!
-        recommendCrossroads()
         recommendCafe3()
         recommendCKC()
+        recommendCrossroads()
         recommendFoothill()
+        mealRecommendTable.delegate = self
+        mealRecommendTable.dataSource = self
 
         // Do any additional setup after loading the view, typically from a nib.
         settingsButton.layer.cornerRadius = 4
@@ -215,14 +215,6 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
 
-
-    override func viewWillAppear(_ animated: Bool) {
-        self.mealRecommendTable.reloadData()
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        self.mealRecommendTable.reloadData()
-    }
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
@@ -241,8 +233,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mealRecommendTable.dequeueReusableCell(withIdentifier: "cell")
-        let values = Array(todaysMeals.values)[indexPath.row]
-        cell?.textLabel?.text = Array(todaysMeals.keys)[indexPath.row]
+        let values = Array(todaysMeals.values).sorted()[indexPath.row]
+        cell?.textLabel?.text = Array(todaysMeals.keys).sorted()[indexPath.row]
 //        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
 //            cell?.textLabel?.text = WMeals[indexPath.row]
 //        } else {

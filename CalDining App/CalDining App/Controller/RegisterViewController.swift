@@ -26,8 +26,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func signUpPressed(_ sender: UIButton) {
     }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.nameTextField.delegate = self

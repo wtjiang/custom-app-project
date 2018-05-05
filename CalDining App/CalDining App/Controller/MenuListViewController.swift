@@ -16,8 +16,20 @@ class MenuListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var menuDisplay: UILabel!
+    var textToDisplay = String()
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        menuDisplay.text = textToDisplay
+        menuDisplay.frame = view.bounds
+        menuDisplay.contentMode = UIViewContentMode.scaleAspectFill
+        menuDisplay.clipsToBounds = true
+        menuDisplay.center = view.center
+        self.view.addSubview(menuDisplay)
+        //self.view.bringSubview(toFront: imageView)
+//        self.view.sendSubview(toBack: menuDisplay)
+
         // Dispose of any resources that can be recreated.
     }
     

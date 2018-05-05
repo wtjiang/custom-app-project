@@ -517,7 +517,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Insert Menus Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-VO-3A0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAP-VO-3A0">
                                 <rect key="frame" x="56" y="231" width="263" height="204"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -541,6 +541,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="menuDisplay" destination="LAP-VO-3A0" id="Nr9-M4-oDF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wXM-6E-0Ck" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -735,7 +738,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6LD-wb-Hcq"/>
-        <segue reference="i2s-gH-UJ1"/>
+        <segue reference="vIH-z9-Sic"/>
         <segue reference="zNq-A3-0lU"/>
         <segue reference="lUC-vR-6xp"/>
         <segue reference="ljr-8T-2fS"/>

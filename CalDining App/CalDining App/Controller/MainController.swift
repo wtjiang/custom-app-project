@@ -94,6 +94,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     todaysMenusDict[meal] = inner
                 }
             }
+            for (category, meal) in resultsWithCategories {
+                
+            }
             self.menuWithWeightsCrossroads = todaysMenusDict
             //print(self.menuWithWeightsCrossroads)
             for (meal, dish) in self.menuWithWeightsCrossroads {

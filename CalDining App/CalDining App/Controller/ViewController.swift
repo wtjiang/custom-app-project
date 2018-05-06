@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var nextButton: UIButton!
-    
+    @IBOutlet weak var clearAll: UIButton!
     @IBOutlet weak var saveSelected: UIButton!
     @IBOutlet weak var menuTable: UITableView!
     
@@ -64,6 +64,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             checked = [Bool](repeating: false, count:menuList.count)
             checkedRows = [IndexPath]()
         }
+//        nextButton.layer.cornerRadius = 4
+//        saveSelected.layer.cornerRadius = 4
+//        clearAll.layer.cornerRadius = 4
     }
     
     func makeSavedAlert() {
@@ -92,6 +95,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = menuTable.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.text = menuList[indexPath.row]
+        cell?.textLabel?.highlightedTextColor = UIColor(red:0.00, green:0.44, blue:0.73, alpha:1.0)
         if !checked[indexPath.row] {
             cell?.accessoryType = .none
         } else if checked[indexPath.row] {
@@ -167,6 +171,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func clearSelectedItems(_ sender: Any) {
         let domain = Bundle.main.bundleIdentifier!
         defaults.removePersistentDomain(forName: domain)
+        defaults.synchronize()
+        checked.removeAll(keepingCapacity: true)
+        checked = [Bool](repeating: false, count:menuList.count)
         //clear selected rows and checkmarks
         if let selectedRows = menuTable.indexPathsForSelectedRows {
             for indexPath in selectedRows {
@@ -174,7 +181,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 menuTable.cellForRow(at: indexPath)?.accessoryType = .none
             }
         }
-        defaults.synchronize()
         isCleared = true
         defaults.set(isCleared, forKey: "isCleared")
         makeClearAlert()

@@ -8,27 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		44189E22209853BF0076D5E9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E21209853BF0076D5E9 /* User.swift */; };
+		44189E2A2099CE1E0076D5E9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */; };
+		44189E432099EA080076D5E9 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E422099EA080076D5E9 /* LogInViewController.swift */; };
+		44189E452099EA150076D5E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44189E442099EA150076D5E9 /* RegisterViewController.swift */; };
 		44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709920940B89009A1420 /* MealRecommend.swift */; };
 		44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CC709D20953CB0009A1420 /* Crossroads.swift */; };
+		44E81FC2209CE3EA003BABAD /* LaunchLogo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */; };
+		44E81FC4209D10DC003BABAD /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E81FC3209D10DC003BABAD /* MenuListViewController.swift */; };
+		44E81FC6209D1EB5003BABAD /* CKC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E81FC5209D1EB4003BABAD /* CKC.swift */; };
+		44E81FC8209D1EBF003BABAD /* Foothill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E81FC7209D1EBF003BABAD /* Foothill.swift */; };
+		44E81FCA209D1EDF003BABAD /* Cafe3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E81FC9209D1EDF003BABAD /* Cafe3.swift */; };
 		6038A384207B3681006276F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A383207B3681006276F2 /* AppDelegate.swift */; };
 		6038A386207B3681006276F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6038A385207B3681006276F2 /* ViewController.swift */; };
-		6038A389207B3681006276F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A387207B3681006276F2 /* Main.storyboard */; settings = {ASSET_TAGS = (PickDiningHall, ); }; };
 		6038A38B207B3681006276F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38A207B3681006276F2 /* Assets.xcassets */; };
-		6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6038A38C207B3681006276F2 /* LaunchScreen.storyboard */; };
+		6088452C209C270300D08337 /* logoGold1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452B209C270300D08337 /* logoGold1.png */; };
+		6088452E209C295100D08337 /* logoBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452D209C295100D08337 /* logoBlack.png */; };
+		60884530209C295D00D08337 /* logoWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 6088452F209C295D00D08337 /* logoWhite.png */; };
+		60884532209C29B200D08337 /* berkeleyview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 60884531209C29B200D08337 /* berkeleyview.jpg */; };
+		60884534209C2D1600D08337 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60884533209C2D1600D08337 /* Main.storyboard */; };
 		60F18549209156B600DFEE3F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F18548209156B600DFEE3F /* MainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44189E21209853BF0076D5E9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		44189E422099EA080076D5E9 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		44189E442099EA150076D5E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		44CC709920940B89009A1420 /* MealRecommend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRecommend.swift; sourceTree = "<group>"; };
 		44CC709D20953CB0009A1420 /* Crossroads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crossroads.swift; sourceTree = "<group>"; };
+		44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchLogo.storyboard; sourceTree = "<group>"; };
+		44E81FC3209D10DC003BABAD /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListViewController.swift; sourceTree = "<group>"; };
+		44E81FC5209D1EB4003BABAD /* CKC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKC.swift; sourceTree = "<group>"; };
+		44E81FC7209D1EBF003BABAD /* Foothill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foothill.swift; sourceTree = "<group>"; };
+		44E81FC9209D1EDF003BABAD /* Cafe3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cafe3.swift; sourceTree = "<group>"; };
 		6038A380207B3681006276F2 /* CalDining App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CalDining App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6038A383207B3681006276F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6038A385207B3681006276F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6038A388207B3681006276F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6038A38A207B3681006276F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6038A38D207B3681006276F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6038A38F207B3681006276F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6088452B209C270300D08337 /* logoGold1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoGold1.png; path = "CalDining App/Pictures/logoGold1.png"; sourceTree = SOURCE_ROOT; };
+		6088452D209C295100D08337 /* logoBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoBlack.png; path = "CalDining App/Pictures/logoBlack.png"; sourceTree = SOURCE_ROOT; };
+		6088452F209C295D00D08337 /* logoWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logoWhite.png; path = "CalDining App/Pictures/logoWhite.png"; sourceTree = SOURCE_ROOT; };
+		60884531209C29B200D08337 /* berkeleyview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = berkeleyview.jpg; path = "CalDining App/Pictures/berkeleyview.jpg"; sourceTree = SOURCE_ROOT; };
+		60884533209C2D1600D08337 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		60F18548209156B600DFEE3F /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,11 +65,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44189E342099DBBC0076D5E9 /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				60884531209C29B200D08337 /* berkeleyview.jpg */,
+				6088452B209C270300D08337 /* logoGold1.png */,
+				6088452D209C295100D08337 /* logoBlack.png */,
+				6088452F209C295D00D08337 /* logoWhite.png */,
+			);
+			name = Pictures;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		44CC70912093D247009A1420 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				60F18548209156B600DFEE3F /* MainController.swift */,
 				6038A385207B3681006276F2 /* ViewController.swift */,
+				44189E292099CE1E0076D5E9 /* WelcomeViewController.swift */,
+				44189E422099EA080076D5E9 /* LogInViewController.swift */,
+				44189E442099EA150076D5E9 /* RegisterViewController.swift */,
+				44E81FC3209D10DC003BABAD /* MenuListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -55,7 +93,7 @@
 		44CC70932093D25B009A1420 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6038A387207B3681006276F2 /* Main.storyboard */,
+				60884533209C2D1600D08337 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -65,7 +103,10 @@
 			children = (
 				44CC709920940B89009A1420 /* MealRecommend.swift */,
 				44CC709D20953CB0009A1420 /* Crossroads.swift */,
+				44E81FC5209D1EB4003BABAD /* CKC.swift */,
 				44189E21209853BF0076D5E9 /* User.swift */,
+				44E81FC7209D1EBF003BABAD /* Foothill.swift */,
+				44E81FC9209D1EDF003BABAD /* Cafe3.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,13 +130,14 @@
 		6038A382207B3681006276F2 /* CalDining App */ = {
 			isa = PBXGroup;
 			children = (
+				44189E342099DBBC0076D5E9 /* Pictures */,
 				44CC70942093D269009A1420 /* Model */,
 				44CC70932093D25B009A1420 /* View */,
 				44CC70912093D247009A1420 /* Controller */,
 				6038A383207B3681006276F2 /* AppDelegate.swift */,
 				6038A38A207B3681006276F2 /* Assets.xcassets */,
-				6038A38C207B3681006276F2 /* LaunchScreen.storyboard */,
 				6038A38F207B3681006276F2 /* Info.plist */,
+				44E81FC1209CE3EA003BABAD /* LaunchLogo.storyboard */,
 			);
 			path = "CalDining App";
 			sourceTree = "<group>";
@@ -162,9 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6038A38E207B3681006276F2 /* LaunchScreen.storyboard in Resources */,
+				44E81FC2209CE3EA003BABAD /* LaunchLogo.storyboard in Resources */,
 				6038A38B207B3681006276F2 /* Assets.xcassets in Resources */,
-				6038A389207B3681006276F2 /* Main.storyboard in Resources */,
+				6088452C209C270300D08337 /* logoGold1.png in Resources */,
+				60884534209C2D1600D08337 /* Main.storyboard in Resources */,
+				6088452E209C295100D08337 /* logoBlack.png in Resources */,
+				60884532209C29B200D08337 /* berkeleyview.jpg in Resources */,
+				60884530209C295D00D08337 /* logoWhite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,34 +222,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				44CC709E20953CB0009A1420 /* Crossroads.swift in Sources */,
+				44189E452099EA150076D5E9 /* RegisterViewController.swift in Sources */,
+				44E81FC6209D1EB5003BABAD /* CKC.swift in Sources */,
+				44E81FCA209D1EDF003BABAD /* Cafe3.swift in Sources */,
 				6038A386207B3681006276F2 /* ViewController.swift in Sources */,
+				44189E432099EA080076D5E9 /* LogInViewController.swift in Sources */,
 				44189E22209853BF0076D5E9 /* User.swift in Sources */,
+				44E81FC8209D1EBF003BABAD /* Foothill.swift in Sources */,
 				60F18549209156B600DFEE3F /* MainController.swift in Sources */,
 				6038A384207B3681006276F2 /* AppDelegate.swift in Sources */,
 				44CC709A20940B89009A1420 /* MealRecommend.swift in Sources */,
+				44189E2A2099CE1E0076D5E9 /* WelcomeViewController.swift in Sources */,
+				44E81FC4209D10DC003BABAD /* MenuListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		6038A387207B3681006276F2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6038A388207B3681006276F2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6038A38C207B3681006276F2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6038A38D207B3681006276F2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6038A390207B3681006276F2 /* Debug */ = {
@@ -318,10 +352,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV3CQ24F8J;
+				DEVELOPMENT_TEAM = 33LDUQQZNX;
 				INFOPLIST_FILE = "CalDining App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaggaa.CalDining-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winston.CalDining-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,10 +367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PV3CQ24F8J;
+				DEVELOPMENT_TEAM = 33LDUQQZNX;
 				INFOPLIST_FILE = "CalDining App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaggaa.CalDining-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.winston.CalDining-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

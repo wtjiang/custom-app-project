@@ -1,48 +1,11 @@
  CALDINING APP
  
+ An app that scrapes the online CalDining Menus page and based on that and a list of food preferences that the user provides upon opening the app (and can later modify) as well as a list of preferred food dining places, sends notifications to the user recommendations each day regarding which meals at which dining halls the user would like the most. 
  
- To keep in mind: we should choose a really great idea with a lot of potential, that way we can keep building on it and make it into something bigger over time. How often do you get credits for personal projects ?
- 
- https://github.com/wtjiang/custom-app-project
- HAS BEEN SHARED WITH BOTH, CHECK EMAILS
- 
- CALDINING IDEA
- Because cal dining is just a set menu (like it has the same things in rotation/in different combinations), we could have users INPUT foods they like, and NOTIFY them whenever good menus are coming up
- 
- -Assign a score for each menu on a certain day, so people know in advance if menus coming up are good in their mind
- 
- -have a database of like all the past foods and in the beginning u put like what foods u like and it sends u notifications?
- 
- -notifications would work, like saying this week: recommended you eat monday lunch, tuesday dinner, etc
- Cal Forecast
- Caldining Select
- Caldining Meal Planner
- Cal Eats
- Cal Choice
- Caldining Choice
- Where2eat
- Cal Chow
- Cal Grub
- Campus Choice
- -cal dining, is it illegal to choose
- We’re making an app that scrapes the online CalDining page and based on that and a list of food preferences that the user provides upon entering the app (and can later modify) as well as a list of preferred food dining places, sends notifications to the reader every morning if they would “like” the food at their preferred dining location for a given day.
- The user could provide 1-5 star ratings for each food item, or only choose a list of given items and then the algorithm in the backend would try to maximize either the total star rating or if the user says that for certain days they can only stay Northside, it just gives you the menu for Foothill. A possible implementation if we have time is to integrate the Google Maps API and, based on the list of foods you like or want to eat on a given day, and if in your schedule you say you want to stay on a certain area of campus for a given meal (depending on possible classes you might have in that area), it suggests possible restaurants that are in that area of campus.
- 
- -Main menu: menus, drop down menu for each dining hall (all food places)
- -Push notification ()
- -Calendar, upcoming menus
- -ranking (best of today’s menus), recommended menu’s
- -location at time (dining hall based on where you are a certain time), preset ranges of -restaurants/dining halls in half a mile, set preferences (dininghall/restaurant, northside vs southside, cheap, expensive, delivery, etc)
- -http://www.calsync.me/, locate you based on class schedule
+ The user choose a list of given items and then the algorithm in the backend would try to maximize either the total star rating or if the user says that for certain days they can only stay Northside, it just gives you the menu for Foothill. A possible implementation if we have time is to integrate the Google Maps API and, based on the list of foods you like or want to eat on a given day, and if in your schedule you say you want to stay on a certain area of campus for a given meal (depending on possible classes you might have in that area), it suggests possible restaurants that are in that area of campus.
  
  
- 
- 
- 
- 
- 
- 
- 
+ Other ideas:
  
  -app that compiles posts from free and for sale, lists it in a nice/more easy to navigate format (by category like free, housemates needed, housing, for sale textbooks, etc)
  

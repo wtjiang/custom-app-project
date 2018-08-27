@@ -83,8 +83,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let crossroads = Crossroads(date: todaysDate)
         crossroads.getMenuFromJSON(date: todaysDate) { (result, resultsWithCategories) -> () in
             //self.menuWithWeightsCrossroads = result
-//            print(result)
-//            print(resultsWithCategories)
+            print(result)
+            print(resultsWithCategories)
             var todaysMenusDict = [String: [String: Double]]()
             for (meal, menu) in result {
                 todaysMenusDict.updateValue([:], forKey: meal)
@@ -94,9 +94,9 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     todaysMenusDict[meal] = inner
                 }
             }
-            for (category, meal) in resultsWithCategories {
-                
-            }
+//            for (category, meal) in resultsWithCategories {
+//
+//            }
             self.menuWithWeightsCrossroads = todaysMenusDict
             //print(self.menuWithWeightsCrossroads)
             for (meal, dish) in self.menuWithWeightsCrossroads {
@@ -233,13 +233,10 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = mealRecommendTable.dequeueReusableCell(withIdentifier: "cell")
-        let values = Array(todaysMeals.values).sorted()[indexPath.row]
-        cell?.textLabel?.text = Array(todaysMeals.keys).sorted()[indexPath.row]
-//        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
-//            cell?.textLabel?.text = WMeals[indexPath.row]
-//        } else {
-//            cell?.textLabel?.text = MFMeals[indexPath.row]
-//        }
+        
+        let values = Array(todaysMeals.values)[indexPath.row]
+        cell?.textLabel?.text = Array(todaysMeals.keys)[indexPath.row]
+        
         if values >= lowerBound && values < middleBound {
             cell?.detailTextLabel?.text = "Not Recommended"
             cell?.detailTextLabel?.textColor = UIColor(red:1.00, green:0.48, blue:0.48, alpha:1.0)

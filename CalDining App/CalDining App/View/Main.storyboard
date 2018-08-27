@@ -737,10 +737,11 @@
         <image name="logoGold1.png" width="900" height="900"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Pvh-iv-XX0"/>
         <segue reference="6LD-wb-Hcq"/>
         <segue reference="vIH-z9-Sic"/>
         <segue reference="zNq-A3-0lU"/>
-        <segue reference="NBH-lj-9TV"/>
+        <segue reference="lUC-vR-6xp"/>
         <segue reference="ljr-8T-2fS"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.98550945520401001" green="0.98115831613540649" blue="0.0070775304920971394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

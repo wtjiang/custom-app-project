@@ -83,8 +83,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let crossroads = Crossroads(date: todaysDate)
         crossroads.getMenuFromJSON(date: todaysDate) { (result, resultsWithCategories) -> () in
             //self.menuWithWeightsCrossroads = result
-            print(result)
-            print(resultsWithCategories)
+//            print(result)
+//            print(resultsWithCategories)
             var todaysMenusDict = [String: [String: Double]]()
             for (meal, menu) in result {
                 todaysMenusDict.updateValue([:], forKey: meal)
@@ -222,6 +222,8 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         performSegue(withIdentifier: "segueToMenu", sender: cell)
     }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //        if currentUser.todaysDate == "Saturday" || currentUser.todaysDate == "Sunday" {
 //            return WMeals.count
@@ -236,7 +238,7 @@ class MainController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let values = Array(todaysMeals.values)[indexPath.row]
         cell?.textLabel?.text = Array(todaysMeals.keys)[indexPath.row]
-        
+
         if values >= lowerBound && values < middleBound {
             cell?.detailTextLabel?.text = "Not Recommended"
             cell?.detailTextLabel?.textColor = UIColor(red:1.00, green:0.48, blue:0.48, alpha:1.0)

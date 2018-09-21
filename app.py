@@ -4,6 +4,8 @@ from flask import Flask, url_for, jsonify, json
 
 app = Flask(__name__)
 data_dict = {}
+all_foods_dict = {}
+all_foods_list = []
 
 previous_list_full = {
     "ACTION BAR": [
@@ -703,7 +705,9 @@ def setup():
         data = response.text
         soups_list.append(BeautifulSoup(data, 'lxml'))
 
+    global all_foods_list
     all_foods_list = []
+    global all_foods_dict
     all_foods_dict = {}
 
     for num in range(len(soups_list)):

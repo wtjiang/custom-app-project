@@ -3,6 +3,7 @@ import requests
 from flask import Flask, url_for, jsonify, json
 
 app = Flask(__name__)
+data_dict = {}
 
 previous_list_full = {
     "ACTION BAR": [
@@ -688,6 +689,7 @@ today_meals = {
 
 def setup():
     soups_list = []
+    global data_dict
     data_dict = {}
     original_url = "https://caldining.berkeley.edu/menu.php"
     response = requests.get(original_url)
@@ -738,6 +740,8 @@ def setup():
         for food in previous_list_full[key]:
             if food not in all_foods_dict[key]:
                 all_foods_dict[key].append(food)
+
+setup()
 
 
 @app.route('/<day_num>')

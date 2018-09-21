@@ -706,9 +706,7 @@ def setup():
         soups_list.append(BeautifulSoup(data, 'lxml'))
 
     global all_foods_list
-    all_foods_list = []
     global all_foods_dict
-    all_foods_dict = {}
 
     for num in range(len(soups_list)):
         time_food_list = {}
